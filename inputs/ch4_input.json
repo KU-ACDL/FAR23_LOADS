@@ -1,0 +1,270 @@
+{
+  "cases": {
+    "aft_gross": [
+      {
+        "name": "WING, OUTBOARD",
+        "weight": 330.0,
+        "x": 97.87,
+        "y": 0.0,
+        "z": 87.73,
+        "ixx_cg": 4444110.0,
+        "iyy_cg": 133485.0,
+        "izz_cg": 4444110.0,
+        "type": 0
+      },
+      {
+        "name": "HORIZ TAIL",
+        "weight": 42.0,
+        "x": 270.36,
+        "y": 0.0,
+        "z": 111.0,
+        "ixx_cg": 0.0,
+        "iyy_cg": 0.0,
+        "izz_cg": 0.0,
+        "type": 0
+      },
+      {
+        "name": "VERT TAIL",
+        "weight": 23.0,
+        "x": 276.93,
+        "y": 0.0,
+        "z": 131.16,
+        "ixx_cg": 0.0,
+        "iyy_cg": 0.0,
+        "izz_cg": 0.0,
+        "type": 0
+      },
+      {
+        "name": "MAIN GEAR WHE",
+        "weight": 45.0,
+        "x": 97.0,
+        "y": 0.0,
+        "z": 69.0,
+        "ixx_cg": 0.0,
+        "iyy_cg": 0.0,
+        "izz_cg": 0.0,
+        "type": 0
+      },
+      {
+        "name": "MAIN GEAR STRU",
+        "weight": 110.0,
+        "x": 97.0,
+        "y": 0.0,
+        "z": 78.0,
+        "ixx_cg": 0.0,
+        "iyy_cg": 0.0,
+        "izz_cg": 0.0,
+        "type": 0
+      },
+      {
+        "name": "NOSE GEAR WHE",
+        "weight": 9.0,
+        "x": 1.0,
+        "y": 0.0,
+        "z": 52.0,
+        "ixx_cg": 0.0,
+        "iyy_cg": 0.0,
+        "izz_cg": 0.0,
+        "type": 0
+      },
+      {
+        "name": "NOSE GEAR STRU",
+        "weight": 40.0,
+        "x": 1.0,
+        "y": 0.0,
+        "z": 65.0,
+        "ixx_cg": 0.0,
+        "iyy_cg": 0.0,
+        "izz_cg": 0.0,
+        "type": 0
+      },
+      {
+        "name": "FLIGHT CONTROL",
+        "weight": 57.0,
+        "x": 123.0,
+        "y": 0.0,
+        "z": 105.0,
+        "ixx_cg": 0.0,
+        "iyy_cg": 0.0,
+        "izz_cg": 0.0,
+        "type": 0
+      },
+      {
+        "name": "NACELLE",
+        "weight": 62.0,
+        "x": 21.0,
+        "y": 0.0,
+        "z": 92.0,
+        "ixx_cg": 0.0,
+        "iyy_cg": 0.0,
+        "izz_cg": 0.0,
+        "type": 0
+      },
+      {
+        "name": "ENGINE INSTALL",
+        "weight": 505.0,
+        "x": 22.0,
+        "y": 0.0,
+        "z": 92.0,
+        "ixx_cg": 52604.0,
+        "iyy_cg": 81473.0,
+        "izz_cg": 81473.0,
+        "type": 0
+      },
+      {
+        "name": "PROPELLER",
+        "weight": 74.0,
+        "x": -10.0,
+        "y": 0.0,
+        "z": 100.0,
+        "ixx_cg": 0.0,
+        "iyy_cg": 0.0,
+        "izz_cg": 0.0,
+        "type": 0
+      },
+      {
+        "name": "SYSTEMS",
+        "weight": 88.0,
+        "x": 60.0,
+        "y": 0.0,
+        "z": 100.0,
+        "ixx_cg": 0.0,
+        "iyy_cg": 0.0,
+        "izz_cg": 0.0,
+        "type": 0
+      },
+      {
+        "name": "FURNISHINGS",
+        "weight": 175.0,
+        "x": 105.0,
+        "y": 0.0,
+        "z": 100.0,
+        "ixx_cg": 0.0,
+        "iyy_cg": 0.0,
+        "izz_cg": 0.0,
+        "type": 0
+      },
+      {
+        "name": "UNUSABLE FUEL",
+        "weight": 12.0,
+        "x": 73.0,
+        "y": 0.0,
+        "z": 80.0,
+        "ixx_cg": 0.0,
+        "iyy_cg": 0.0,
+        "izz_cg": 0.0,
+        "type": 0
+      },
+      {
+        "name": "FSELAGE STRUC",
+        "weight": 250.0,
+        "x": 99.0,
+        "y": 0.0,
+        "z": 80.0,
+        "ixx_cg": 0.0,
+        "iyy_cg": 1131020.0,
+        "izz_cg": 1131020.0,
+        "type": 0
+      },
+      {
+        "name": "PILOT",
+        "weight": 170.0,
+        "x": 75.0,
+        "y": 0.0,
+        "z": 100.0,
+        "ixx_cg": 28730.0,
+        "iyy_cg": 24480.0,
+        "izz_cg": 4250.0,
+        "type": 1
+      },
+      {
+        "name": "30 MIN N E L",
+        "weight": 71.0,
+        "x": 70.0,
+        "y": 0.0,
+        "z": 82.0,
+        "ixx_cg": 86975.0,
+        "iyy_cg": 0.0,
+        "izz_cg": 86975.0,
+        "type": 1
+      },
+      {
+        "name": "COPILOT",
+        "weight": 170.0,
+        "x": 75.0,
+        "y": 0.0,
+        "z": 100.0,
+        "ixx_cg": 28730.0,
+        "iyy_cg": 24480.0,
+        "izz_cg": 4250.0,
+        "type": 2
+      },
+      {
+        "name": "3RD PERSON",
+        "weight": 170.0,
+        "x": 111.0,
+        "y": 0.0,
+        "z": 100.0,
+        "ixx_cg": 28730.0,
+        "iyy_cg": 24480.0,
+        "izz_cg": 4250.0,
+        "type": 2
+      },
+      {
+        "name": "4TH PERSON",
+        "weight": 170.0,
+        "x": 111.0,
+        "y": 0.0,
+        "z": 100.0,
+        "ixx_cg": 28730.0,
+        "iyy_cg": 24480.0,
+        "izz_cg": 4250.0,
+        "type": 2
+      },
+      {
+        "name": "5TH PERSON",
+        "weight": 170.0,
+        "x": 150.0,
+        "y": 0.0,
+        "z": 100.0,
+        "ixx_cg": 28730.0,
+        "iyy_cg": 24480.0,
+        "izz_cg": 4250.0,
+        "type": 2
+      },
+      {
+        "name": "6TH PERSON",
+        "weight": 170.0,
+        "x": 150.0,
+        "y": 0.0,
+        "z": 100.0,
+        "ixx_cg": 28730.0,
+        "iyy_cg": 24480.0,
+        "izz_cg": 4250.0,
+        "type": 2
+      },
+      {
+        "name": "FUEL TO GR WT",
+        "weight": 409.0,
+        "x": 70.0,
+        "y": 0.0,
+        "z": 87.0,
+        "ixx_cg": 501025.0,
+        "iyy_cg": 0.0,
+        "izz_cg": 501025.0,
+        "type": 2
+      },
+      {
+        "name": "BALLAST",
+        "weight": 78.0,
+        "x": 103.7,
+        "y": 0.0,
+        "z": 90.0,
+        "ixx_cg": 0.0,
+        "iyy_cg": 0.0,
+        "izz_cg": 0.0,
+        "type": 2
+      }
+    ]
+  }
+}

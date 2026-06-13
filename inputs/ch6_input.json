@@ -1,0 +1,18 @@
+{
+  "chapter": 6,
+  "input": {
+    "category": "N",
+    "weight": 3400.0,
+    "wing_area": 184.12,
+    "vh": 217.2,
+    "vs_clean": 62.2,
+    "vs_flap": 58.6,
+    "mach_shoulder_altitude": 12000.0,
+    "chosen_vc": 1.0,
+    "chosen_vd": 1.0,
+    "chosen_va": 1.0,
+    "chosen_vf": 1.0,
+    "chosen_n_pos": 1.0,
+    "chosen_n_neg": 1.0
+  }
+}
