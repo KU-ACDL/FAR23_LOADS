@@ -1,0 +1,365 @@
+Wing Geometry
+                            AERODYNAMIC SURFACE GEOMETRIC PROPERTIES
+
+WING SURFACE GEOM PROP FOR 6 PL SINGLE ENG PLANE
+
+SYM ABOUT CL
+
+COORDINATES OF LEADING EDGE
+POINT NO        FUS STA (XLE)   WING STA (YLE)
+   1             45              0
+   2       64.31301           46.5
+   3             72            201
+
+COORDINATES OF TRAILING EDGE
+POINT NO        FUS STA (XTE)   WING STA (YTE)
+   1            146              0
+   2            116            201
+
+AREA/SIDE   MAC        YLE(MAC)    XLE(MAC)    ASPECT RATIO
+   13257    69.246      87.854      63.641         6.095
+
+ELEMENT DATA
+ELEM        XLE        XTE          Y          C       AREA
+   1     47.087    145.250      5.025     98.163    986.538
+   2     51.261    143.750     15.075     92.489    929.513
+   3     55.435    142.250     25.125     86.815    872.488
+   4     59.609    140.750     35.175     81.141    815.463
+   5     63.783    139.250     45.225     75.467    758.439
+   6     64.750    137.750     55.275     73.000    733.654
+   7     65.250    136.250     65.325     71.000    713.554
+   8     65.750    134.750     75.375     69.000    693.453
+   9     66.250    133.250     85.425     67.000    673.353
+  10     66.750    131.750     95.475     65.000    653.253
+  11     67.250    130.250    105.525     63.000    633.153
+  12     67.750    128.750    115.575     61.000    613.052
+  13     68.250    127.250    125.625     59.000    592.952
+  14     68.750    125.750    135.675     57.000    572.852
+  15     69.250    124.250    145.725     55.000    552.752
+  16     69.750    122.750    155.775     53.000    532.651
+  17     70.250    121.250    165.825     51.000    512.551
+  18     70.750    119.750    175.875     49.000    492.451
+  19     71.250    118.250    185.925     47.000    472.350
+  20     71.750    116.750    195.975     45.000    452.250
+
+
+Aileron Geometry
+                            AERODYNAMIC SURFACE GEOMETRIC PROPERTIES
+
+AILERON FOR 6 PL SINGLE ENG PLANE
+
+NOT SYM ABOUT CL
+
+COORDINATES OF LEADING EDGE
+POINT NO        FUS STA (XLE)   WING STA (YLE)
+   1         116.38            109
+   2        107.744            190
+
+COORDINATES OF TRAILING EDGE
+POINT NO        FUS STA (XTE)   WING STA (YTE)
+   1         116.38            109
+   2        129.522        110.401
+   3        117.642            190
+
+AREA/SIDE   MAC        YLE(MAC)    XLE(MAC)    ASPECT RATIO
+     932    11.645     147.867     112.236         7.036
+
+
+Aileron Forward Of Hinge Line Geometry
+                            AERODYNAMIC SURFACE GEOMETRIC PROPERTIES
+
+AILERON FORWARD OF HINGE LINE
+
+NOT SYM ABOUT CL
+
+COORDINATES OF LEADING EDGE
+POINT NO        FUS STA (XLE)   WING STA (YLE)
+   1         116.38            109
+   2        107.744            190
+
+COORDINATES OF TRAILING EDGE
+POINT NO        FUS STA (XTE)   WING STA (YTE)
+   1         116.38            109
+   2        118.993        109.279
+   3        109.705            190
+
+AREA/SIDE   MAC        YLE(MAC)    XLE(MAC)    ASPECT RATIO
+     187     2.320     147.495     112.276        35.171
+
+
+Aileron Aft Of Hinge Line Geometry
+                            AERODYNAMIC SURFACE GEOMETRIC PROPERTIES
+
+AILERON AFT OF HINGE LINE
+
+NOT SYM ABOUT CL
+
+COORDINATES OF LEADING EDGE
+POINT NO        FUS STA (XLE)   WING STA (YLE)
+   1        118.993        109.279
+   2        109.705            190
+
+COORDINATES OF TRAILING EDGE
+POINT NO        FUS STA (XTE)   WING STA (YTE)
+   1        118.993        109.279
+   2        129.522        110.401
+   3        117.642            190
+
+AREA/SIDE   MAC        YLE(MAC)    XLE(MAC)    ASPECT RATIO
+     747     9.347     147.928     114.546         8.728
+
+
+Flap Geometry
+                            AERODYNAMIC SURFACE GEOMETRIC PROPERTIES
+
+FLAP
+
+NOT SYM ABOUT CL
+
+COORDINATES OF LEADING EDGE
+POINT NO        FUS STA (XLE)   WING STA (YLE)
+   1        122.567             23
+   2        114.065        108.753
+   3        129.522        110.401
+
+COORDINATES OF TRAILING EDGE
+POINT NO        FUS STA (XTE)   WING STA (YTE)
+   1        142.567             23
+   2        129.522        110.401
+
+AREA/SIDE   MAC        YLE(MAC)    XLE(MAC)    ASPECT RATIO
+    1544    17.869      64.537     118.498         4.948
+
+
+Vertical Tail Geometry
+                            AERODYNAMIC SURFACE GEOMETRIC PROPERTIES
+
+VERTICAL TAIL
+
+NOT SYM ABOUT CL
+
+COORDINATES OF LEADING EDGE
+POINT NO        FUS STA (XLE)   WING STA (YLE)
+   1        292.917          111.5
+   2        240.912            117
+   3            277          168.5
+
+COORDINATES OF TRAILING EDGE
+POINT NO        FUS STA (XTE)   WING STA (YTE)
+   1        292.917          111.5
+   2            302        166.794
+   3            277          168.5
+
+AREA/SIDE   MAC        YLE(MAC)    XLE(MAC)    ASPECT RATIO
+    2137    40.409     137.759     256.728         1.520
+
+
+Vertical Stabilizer Geometry
+                            AERODYNAMIC SURFACE GEOMETRIC PROPERTIES
+
+VERTICAL STABILIZER
+
+NOT SYM ABOUT CL
+
+COORDINATES OF LEADING EDGE
+POINT NO        FUS STA (XLE)   WING STA (YLE)
+   1        275.346        113.358
+   2        240.912            117
+   3            277          168.5
+
+COORDINATES OF TRAILING EDGE
+POINT NO        FUS STA (XTE)   WING STA (YTE)
+   1        275.346        113.358
+   2        292.443        163.539
+   3        280.098        164.773
+   4            282            168
+   5            277          168.5
+
+AREA/SIDE   MAC        YLE(MAC)    XLE(MAC)    ASPECT RATIO
+    1370    27.464     137.526     255.881         2.220
+
+
+Rudder Geometry
+                            AERODYNAMIC SURFACE GEOMETRIC PROPERTIES
+
+RUDDER
+
+NOT SYM ABOUT CL
+
+COORDINATES OF LEADING EDGE
+POINT NO        FUS STA (XLE)   WING STA (YLE)
+   1        292.917          111.5
+   2        275.798        114.685
+   3        292.443        163.539
+   4        280.098        164.773
+   5            282            168
+
+COORDINATES OF TRAILING EDGE
+POINT NO        FUS STA (XTE)   WING STA (YTE)
+   1        292.917          111.5
+   2            302        166.794
+   3            282            168
+
+AREA/SIDE   MAC        YLE(MAC)    XLE(MAC)    ASPECT RATIO
+     754    14.187     138.496     283.042         4.235
+
+
+Horizontal Tail Geometry
+                            AERODYNAMIC SURFACE GEOMETRIC PROPERTIES
+
+HORIZONTAL TAIL
+
+SYM ABOUT CL
+
+COORDINATES OF LEADING EDGE
+POINT NO        FUS STA (XLE)   WING STA (YLE)
+   1          247.6              0
+   2        255.207         63.685
+   3        256.117           70.1
+   4            261           72.1
+   5          268.1           73.1
+
+COORDINATES OF TRAILING EDGE
+POINT NO        FUS STA (XTE)   WING STA (YTE)
+   1            284              0
+   2            284          1.445
+   3        292.567            6.2
+   4        290.662           33.2
+   5        288.657         33.201
+   6          286.3           66.6
+   7          284.7           69.7
+   8          279.8           71.9
+   9            274           72.7
+  10          268.1           73.1
+
+AREA/SIDE   MAC        YLE(MAC)    XLE(MAC)    ASPECT RATIO
+    2660    37.317      33.685     251.698         4.017
+
+
+Horizontal Stabilizer Geometry
+                            AERODYNAMIC SURFACE GEOMETRIC PROPERTIES
+
+HORIZONTAL STABILIZER
+
+SYM ABOUT CL
+
+COORDINATES OF LEADING EDGE
+POINT NO        FUS STA (XLE)   WING STA (YLE)
+   1          247.6              0
+   2        255.207         63.685
+   3        256.117           70.1
+   4            261           72.1
+
+COORDINATES OF TRAILING EDGE
+POINT NO        FUS STA (XTE)   WING STA (YTE)
+   1         272.75              0
+   2        273.138           66.6
+   3            261           72.1
+
+AREA/SIDE   MAC        YLE(MAC)    XLE(MAC)    ASPECT RATIO
+    1479    21.245      32.752     251.528         7.028
+
+
+Elevator Geometry
+                            AERODYNAMIC SURFACE GEOMETRIC PROPERTIES
+
+ELEVATOR
+
+SYM ABOUT CL
+
+COORDINATES OF LEADING EDGE
+POINT NO        FUS STA (XLE)   WING STA (YLE)
+   1         272.75              0
+   2        273.138           66.6
+   3            261           72.1
+   4          268.1           73.1
+
+COORDINATES OF TRAILING EDGE
+POINT NO        FUS STA (XTE)   WING STA (YTE)
+   1            284              0
+   2            284          1.445
+   3        292.567            6.2
+   4        290.662           33.2
+   5        288.657         33.201
+   6          286.3           66.6
+   7          284.7           69.7
+   8          279.8           71.9
+   9            274           72.7
+  10          268.1           73.1
+
+AREA/SIDE   MAC        YLE(MAC)    XLE(MAC)    ASPECT RATIO
+    1181    16.535      34.861     272.362         9.046
+
+
+Elevator Forward Of Hinge Line Geometry
+                            AERODYNAMIC SURFACE GEOMETRIC PROPERTIES
+
+ELEVATOR FORWARD OF HINGE LINE
+
+SYM ABOUT CL
+
+COORDINATES OF LEADING EDGE
+POINT NO        FUS STA (XLE)   WING STA (YLE)
+   1         272.75              0
+   2        273.138           66.6
+   3            261           72.1
+   4          268.1           73.1
+
+COORDINATES OF TRAILING EDGE
+POINT NO        FUS STA (XTE)   WING STA (YTE)
+   1            274              0
+   2            274           72.7
+   3          268.1           73.1
+
+AREA/SIDE   MAC        YLE(MAC)    XLE(MAC)    ASPECT RATIO
+     118     4.240      47.131     269.734        90.679
+
+
+Elevator Aft Of The Hinge Line Geometry
+                            AERODYNAMIC SURFACE GEOMETRIC PROPERTIES
+
+ELEVATOR AFT OF THE HINGE LINE
+
+SYM ABOUT CL
+
+COORDINATES OF LEADING EDGE
+POINT NO        FUS STA (XLE)   WING STA (YLE)
+   1            274              0
+   2            274           72.7
+
+COORDINATES OF TRAILING EDGE
+POINT NO        FUS STA (XTE)   WING STA (YTE)
+   1            284              0
+   2            284          1.445
+   3        292.567            6.2
+   4        290.662           33.2
+   5        288.657         33.201
+   6          286.3           66.6
+   7          284.7           69.7
+   8          279.8           71.9
+   9            274           72.7
+
+AREA/SIDE   MAC        YLE(MAC)    XLE(MAC)    ASPECT RATIO
+    1065    15.216      33.509     274.000         9.926
+
+
+Elevator Tab Geometry
+                            AERODYNAMIC SURFACE GEOMETRIC PROPERTIES
+
+ELEVATOR TAB
+
+NOT SYM ABOUT CL
+
+COORDINATES OF LEADING EDGE
+POINT NO        FUS STA (XLE)   WING STA (YLE)
+   1            284          1.445
+   2            284         33.201
+
+COORDINATES OF TRAILING EDGE
+POINT NO        FUS STA (XTE)   WING STA (YTE)
+   1            284          1.445
+   2        292.567            6.2
+   3        290.662         33.201
+
+AREA/SIDE   MAC        YLE(MAC)    XLE(MAC)    ASPECT RATIO
+     226     7.479      17.828     284.000         4.463

@@ -1,0 +1,14 @@
+{
+  "chapter": 2,
+  "program": "WTESTIMA.BAS",
+  "Aircraft Data": {
+    "AIRPLANE$": "6 PLACE SINGLE ENGINE GENERAL AVIATION AIRPLANE",
+    "NOENGS": 1,
+    "HP": 265,
+    "ENGTYPE$": "RF",
+    "SEATS": 6,
+    "BAG": 0,
+    "P$": "U",
+    "HOURS": 3
+  }
+}
