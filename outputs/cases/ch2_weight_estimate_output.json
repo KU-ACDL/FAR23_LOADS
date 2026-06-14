@@ -1,0 +1,166 @@
+{
+  "chapter": 2,
+  "program": "WTESTIMA.BAS",
+  "units": {
+    "weight": "lb",
+    "power": "hp",
+    "time": "hr"
+  },
+  "INPUT": {
+    "Aircraft Data": {
+      "NOENGS": 1,
+      "HP": 265.0,
+      "ENGTYPE$": "RF",
+      "ENGTYPE_DESCRIPTION": "RECIPROCAL 4 CYCLE ENGINE",
+      "SEATS": 6,
+      "BAG": 0.0,
+      "P$": "U",
+      "P_DESCRIPTION": "UNPRESSURIZED",
+      "HOURS": 3.0,
+      "AIRPLANE$": "6 PLACE SINGLE ENGINE GENERAL AVIATION AIRPLANE"
+    }
+  },
+  "INTERMEDIATE": {
+    "Useful Load": {
+      "WTSEATS": 1020.0,
+      "WTFUEL": 298.125,
+      "USEFUL": 1318.125
+    },
+    "Weight Estimation": {
+      "K": 0.62,
+      "WTO": 3468.75,
+      "EMPTY": 2150.625,
+      "OPTMISC_ITERATIONS": 1
+    },
+    "Structure Weight": {
+      "WTFUS": 340.63124999999997,
+      "WTWING": 359.3625,
+      "WTTAIL": 81.16875,
+      "WTNAC": 50.64375,
+      "WTLANDGEAR": 198.06562499999998,
+      "WTCONTROLS": 52.03125,
+      "WTSTRUCT": 1081.903125
+    },
+    "Powerplant Weight": {
+      "WTENGINSTALLED": 490.0228331215,
+      "WTPROP": 83.3131774703786,
+      "WTFUELSYS": 52.334438577376204,
+      "WTEXHAUST": 72.0333564688605,
+      "WTENGOTHER": 86.09701177944756,
+      "WTPPGROUP": 700.4876399471843
+    },
+    "System Weight": {
+      "WTNAVEQUIP": 15.262500000000001,
+      "WTPNEUMATIC": 3.4340625,
+      "WTELECTRICAL": 83.596875,
+      "WTELECTRONIC": 0.0,
+      "WTFURNEQUIP": 152.971875,
+      "WTENVIRANTIICE": 10.753124999999999,
+      "WTMISC": 7.6312500000000005,
+      "WTTOTALSYS": 268.48125
+    },
+    "Component Weight Sum": {
+      "WTSTRUCT": 1081.903125,
+      "WTPPGROUP": 700.4876399471843,
+      "WTTOTALSYS": 268.48125,
+      "SUMWTS": 2050.872014947184,
+      "WTENGINSTALLED": 490.0228331215
+    },
+    "Check": {
+      "OPTMISC": 99.7529850528158,
+      "OPTMISC_ITERATIONS": 1
+    }
+  },
+  "OUTPUT": {
+    "Weight Summary": {
+      "WTO": 3468.75,
+      "USEFUL": 1318.125,
+      "EMPTY": 2150.625,
+      "ETR": 0.62
+    },
+    "Structure Weight": {
+      "WTWING": 359.3625,
+      "WTFUS": 340.63124999999997,
+      "WTTAIL": 81.16875,
+      "WTNAC": 50.64375,
+      "WTLANDGEAR": 198.06562499999998,
+      "WTCONTROLS": 52.03125,
+      "WTSTRUCT": 1081.903125
+    },
+    "Powerplant Weight": {
+      "WTENGINSTALLED": 490.0228331215,
+      "WTPROP": 83.3131774703786,
+      "WTFUELSYS": 52.334438577376204,
+      "WTEXHAUST": 72.0333564688605,
+      "WTENGOTHER": 86.09701177944756,
+      "WTPPGROUP": 700.4876399471843
+    },
+    "System Weight": {
+      "WTNAVEQUIP": 15.262500000000001,
+      "WTPNEUMATIC": 3.4340625,
+      "WTELECTRICAL": 83.596875,
+      "WTELECTRONIC": 0.0,
+      "WTFURNEQUIP": 152.971875,
+      "WTENVIRANTIICE": 10.753124999999999,
+      "WTMISC": 7.6312500000000005,
+      "WTTOTALSYS": 268.48125
+    },
+    "Optional / Useful Load Items": {
+      "OPTMISC": 99.7529850528158,
+      "PILOT": 170.0,
+      "PASSENGER NO. 2": 170.0,
+      "PASSENGER NO. 3": 170.0,
+      "PASSENGER NO. 4": 170.0,
+      "PASSENGER NO. 5": 170.0,
+      "PASSENGER NO. 6": 170.0,
+      "BAGGAGE": 0.0,
+      "FUEL": 298.125
+    }
+  },
+  "OUTPUT_ROUNDED": {
+    "Weight Summary": {
+      "WTO": 3468,
+      "USEFUL": 1318,
+      "EMPTY": 2150,
+      "ETR": 0.62
+    },
+    "Structure Weight": {
+      "WTWING": 359,
+      "WTFUS": 340,
+      "WTTAIL": 81,
+      "WTNAC": 50,
+      "WTLANDGEAR": 198,
+      "WTCONTROLS": 52,
+      "WTSTRUCT": 1081
+    },
+    "Powerplant Weight": {
+      "WTENGINSTALLED": 490,
+      "WTPROP": 83,
+      "WTFUELSYS": 52,
+      "WTEXHAUST": 72,
+      "WTENGOTHER": 86,
+      "WTPPGROUP": 700
+    },
+    "System Weight": {
+      "WTNAVEQUIP": 15,
+      "WTPNEUMATIC": 3,
+      "WTELECTRICAL": 83,
+      "WTELECTRONIC": 0,
+      "WTFURNEQUIP": 152,
+      "WTENVIRANTIICE": 10,
+      "WTMISC": 7,
+      "WTTOTALSYS": 268
+    },
+    "Optional / Useful Load Items": {
+      "OPTMISC": 99,
+      "PILOT": 170,
+      "PASSENGER NO. 2": 170,
+      "PASSENGER NO. 3": 170,
+      "PASSENGER NO. 4": 170,
+      "PASSENGER NO. 5": 170,
+      "PASSENGER NO. 6": 170,
+      "BAGGAGE": 0,
+      "FUEL": 298
+    }
+  }
+}

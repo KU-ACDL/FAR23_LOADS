@@ -1,0 +1,60 @@
+Estimated Weight
+
+ESTIMATED WEIGHT DATA FOR 6 PLACE SINGLE ENGINE GENERAL AVIATION AIRPLANE
+
+INPUT
+
+MAX CONTINUOUS HP           265
+NUMBER OF ENGINES           1
+NUMBER OF SEATS             6
+HOURS AT CRUISE POWER       3
+MAX BAGGAGE WEIGHT          0
+UNPRESSURIZED
+RECIPROCAL 4 CYCLE ENGINE
+
+OUTPUT
+
+MAX TAKE OFF WT             3468
+USEFUL LOAD                 1318
+EMPTY WEIGHT                2150
+W(EMPTY)/W(TO)              0.62
+
+WING                        359
+FUSELAGE                    340
+TAIL                        81
+NACELLE                     50
+LANDING GEAR                198
+CONTROLS                    52
+TOTAL STRUCTURE                           1081
+
+ENGINE INSTALLED            490
+(INCLUDES PROPELLER(S))     ( 83 )
+FUEL SYSTEM                 52
+EXHAUST                     72
+OTHER ENGINE DETAILS        86
+TOTAL POWERPLANT                          700
+
+INSTRUMENTS & NAV EQUIP     15
+PNEUMATICS                  3
+ELECTRICAL                  83
+ELECTRONICS                 0
+FURNISHINGS & EQUIPMENT     152
+ENVIRONMENTAL & ANTI-ICE    10
+MISC OTHER SYSTEM WT        7
+TOTAL SYSTEMS WEIGHT                      268
+
+OPTIONS & MISCELLANEOUS     99
+
+EMPTY WEIGHT                                        2150
+
+PILOT                       170
+PASSENGER NO. 2             170
+PASSENGER NO. 3             170
+PASSENGER NO. 4             170
+PASSENGER NO. 5             170
+PASSENGER NO. 6             170
+BAGGAGE                     0
+FUEL                        298
+
+
+USEFUL LOAD                                         1318
