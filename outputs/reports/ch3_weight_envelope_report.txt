@@ -1,0 +1,31 @@
+Weight CG Envelope
+
+CASE: aft_gross
+
+FORWARD EDGE
+NO  ADDED                       XBAR       ZBAR     WEIGHT
+ 1  MINIMUM WEIGHT                73.092     90.725   2063.000
+ 2  FUEL TO FULL                  72.581     90.109   2472.000
+ 3  COPILOT                       72.736     90.745   2642.000
+ 4  4TH PERSON                    75.050     91.305   2812.000
+ 5  3RD PERSON                    77.099     91.800   2982.000
+ 6  6TH PERSON                    81.031     92.243   3152.000
+ 7  5TH PERSON                    84.560     92.639   3322.000
+ 8  BAGGAGE                       87.888     93.245   3442.000
+
+AFT EDGE
+NO  ADDED                       XBAR       ZBAR     WEIGHT
+ 1  MINIMUM WEIGHT                73.092     90.725   2063.000
+ 9  BAGGAGE                       78.969     91.784   2183.000
+10  5TH PERSON                    84.101     92.378   2353.000
+11  6TH PERSON                    88.541     92.892   2523.000
+12  3RD PERSON                    89.959     93.340   2693.000
+13  4TH PERSON                    91.208     93.736   2863.000
+14  COPILOT                       90.300     94.087   3033.000
+ 8  FUEL TO FULL                  87.888     93.245   3442.000
+
+STRUCTURAL LIMIT POINTS
+POINT                         XBAR     WEIGHT
+Fwd Reduced                   72.643   2800.000
+Fwd Gross                     77.490   3400.000
+Aft Gross                     85.107   3400.000

@@ -1,0 +1,4051 @@
+{
+  "chapter": 3,
+  "program": "WTENV.BAS",
+  "input": {
+    "path": "inputs/weight_db.json",
+    "case": "aft_gross",
+    "program_data": {
+      "M": 100,
+      "ID": "6 PLACE AIRPLANE",
+      "F": "WTAFTCG.INP",
+      "Q": true
+    },
+    "plot_input": {
+      "title": "USEFUL LOAD ENVELOPE AND STRUCTURAL LIMITS",
+      "x_axis": "Fuselage Station",
+      "y_axis": "Weight",
+      "geometry_output_path": "outputs/cases/ch5_geometry_output.json",
+      "structural_limits": {
+        "FWDGRL": 20.0,
+        "AFTGRL": 31.0,
+        "FWDREDL": 13.0,
+        "GROSS_WEIGHT": 3400.0,
+        "REDUCED_WEIGHT": 2800.0
+      }
+    },
+    "exclude_names": []
+  },
+  "units": {
+    "XBAR": "in",
+    "ZBAR": "in",
+    "WEIGHT": "lb"
+  },
+  "envelope": {
+    "empty_weight": {
+      "ADDED": "EMPTY WEIGHT",
+      "XBAR": 73.03491218441275,
+      "ZBAR": 90.19944017563118,
+      "WEIGHT": 1822.0,
+      "S1": 1822.0
+    },
+    "minimum_weight": {
+      "ADDED": "MINIMUM WEIGHT",
+      "XBAR": 73.09239457101309,
+      "ZBAR": 90.72485700436258,
+      "WEIGHT": 2063.0,
+      "S1": 2063.0
+    },
+    "basic_points": [
+      {
+        "ADDED": "EMPTY WEIGHT",
+        "XBAR": 73.03491218441275,
+        "ZBAR": 90.19944017563118,
+        "WEIGHT": 1822.0,
+        "S1": 1822.0
+      },
+      {
+        "ADDED": "PILOT",
+        "XBAR": 73.2026154618474,
+        "ZBAR": 91.03583333333333,
+        "WEIGHT": 1992.0,
+        "S1": 1992.0
+      },
+      {
+        "ADDED": "MINIMUM WEIGHT",
+        "XBAR": 73.09239457101309,
+        "ZBAR": 90.72485700436258,
+        "WEIGHT": 2063.0,
+        "S1": 2063.0
+      }
+    ],
+    "load_points": [
+      {
+        "POINT_ID": 1,
+        "ADDED": "MINIMUM WEIGHT",
+        "XBAR": 73.09239457101309,
+        "ZBAR": 90.72485700436258,
+        "WEIGHT": 2063.0,
+        "S1": 2063.0,
+        "LOADS": [],
+        "EDGES": [
+          "forward_edge",
+          "aft_edge"
+        ]
+      },
+      {
+        "POINT_ID": 2,
+        "ADDED": "FUEL TO FULL",
+        "XBAR": 72.58074838187703,
+        "ZBAR": 90.10856796116505,
+        "WEIGHT": 2472.0,
+        "S1": 2472.0,
+        "LOADS": [
+          "FUEL TO FULL"
+        ],
+        "EDGES": [
+          "forward_edge"
+        ]
+      },
+      {
+        "POINT_ID": 3,
+        "ADDED": "COPILOT",
+        "XBAR": 72.7364155942468,
+        "ZBAR": 90.7450340651022,
+        "WEIGHT": 2642.0,
+        "S1": 2642.0,
+        "LOADS": [
+          "FUEL TO FULL",
+          "COPILOT"
+        ],
+        "EDGES": [
+          "forward_edge"
+        ]
+      },
+      {
+        "POINT_ID": 4,
+        "ADDED": "4TH PERSON",
+        "XBAR": 75.0496479374111,
+        "ZBAR": 91.30454480796587,
+        "WEIGHT": 2812.0,
+        "S1": 2812.0,
+        "LOADS": [
+          "FUEL TO FULL",
+          "COPILOT",
+          "4TH PERSON"
+        ],
+        "EDGES": [
+          "forward_edge"
+        ]
+      },
+      {
+        "POINT_ID": 5,
+        "ADDED": "3RD PERSON",
+        "XBAR": 77.09913145539906,
+        "ZBAR": 91.8002615694165,
+        "WEIGHT": 2982.0,
+        "S1": 2982.0,
+        "LOADS": [
+          "FUEL TO FULL",
+          "COPILOT",
+          "4TH PERSON",
+          "3RD PERSON"
+        ],
+        "EDGES": [
+          "forward_edge"
+        ]
+      },
+      {
+        "POINT_ID": 6,
+        "ADDED": "6TH PERSON",
+        "XBAR": 81.03096763959391,
+        "ZBAR": 92.24250634517766,
+        "WEIGHT": 3152.0,
+        "S1": 3152.0,
+        "LOADS": [
+          "FUEL TO FULL",
+          "COPILOT",
+          "4TH PERSON",
+          "3RD PERSON",
+          "6TH PERSON"
+        ],
+        "EDGES": [
+          "forward_edge"
+        ]
+      },
+      {
+        "POINT_ID": 7,
+        "ADDED": "5TH PERSON",
+        "XBAR": 84.56038832028898,
+        "ZBAR": 92.63948826008429,
+        "WEIGHT": 3322.0,
+        "S1": 3322.0,
+        "LOADS": [
+          "FUEL TO FULL",
+          "COPILOT",
+          "4TH PERSON",
+          "3RD PERSON",
+          "6TH PERSON",
+          "5TH PERSON"
+        ],
+        "EDGES": [
+          "forward_edge"
+        ]
+      },
+      {
+        "POINT_ID": 8,
+        "ADDED": "BAGGAGE",
+        "XBAR": 87.88774259151656,
+        "ZBAR": 93.24473561882627,
+        "WEIGHT": 3442.0,
+        "S1": 3442.0,
+        "LOADS": [
+          "FUEL TO FULL",
+          "COPILOT",
+          "4TH PERSON",
+          "3RD PERSON",
+          "6TH PERSON",
+          "5TH PERSON",
+          "BAGGAGE"
+        ],
+        "EDGES": [
+          "forward_edge",
+          "aft_edge"
+        ]
+      },
+      {
+        "POINT_ID": 9,
+        "ADDED": "BAGGAGE",
+        "XBAR": 78.96912963811269,
+        "ZBAR": 91.7844159413651,
+        "WEIGHT": 2183.0,
+        "S1": 2183.0,
+        "LOADS": [
+          "BAGGAGE"
+        ],
+        "EDGES": [
+          "aft_edge"
+        ]
+      },
+      {
+        "POINT_ID": 10,
+        "ADDED": "5TH PERSON",
+        "XBAR": 84.10098172545688,
+        "ZBAR": 92.37797705057373,
+        "WEIGHT": 2353.0,
+        "S1": 2353.0,
+        "LOADS": [
+          "BAGGAGE",
+          "5TH PERSON"
+        ],
+        "EDGES": [
+          "aft_edge"
+        ]
+      },
+      {
+        "POINT_ID": 11,
+        "ADDED": "6TH PERSON",
+        "XBAR": 88.5412643678161,
+        "ZBAR": 92.8915497423702,
+        "WEIGHT": 2523.0,
+        "S1": 2523.0,
+        "LOADS": [
+          "BAGGAGE",
+          "5TH PERSON",
+          "6TH PERSON"
+        ],
+        "EDGES": [
+          "aft_edge"
+        ]
+      },
+      {
+        "POINT_ID": 12,
+        "ADDED": "3RD PERSON",
+        "XBAR": 89.95900854066097,
+        "ZBAR": 93.34028221314519,
+        "WEIGHT": 2693.0,
+        "S1": 2693.0,
+        "LOADS": [
+          "BAGGAGE",
+          "5TH PERSON",
+          "6TH PERSON",
+          "3RD PERSON"
+        ],
+        "EDGES": [
+          "aft_edge"
+        ]
+      },
+      {
+        "POINT_ID": 13,
+        "ADDED": "4TH PERSON",
+        "XBAR": 91.20838630806847,
+        "ZBAR": 93.73572476423332,
+        "WEIGHT": 2863.0,
+        "S1": 2863.0,
+        "LOADS": [
+          "BAGGAGE",
+          "5TH PERSON",
+          "6TH PERSON",
+          "3RD PERSON",
+          "4TH PERSON"
+        ],
+        "EDGES": [
+          "aft_edge"
+        ]
+      },
+      {
+        "POINT_ID": 14,
+        "ADDED": "COPILOT",
+        "XBAR": 90.29990438509726,
+        "ZBAR": 94.08683811407847,
+        "WEIGHT": 3033.0,
+        "S1": 3033.0,
+        "LOADS": [
+          "BAGGAGE",
+          "5TH PERSON",
+          "6TH PERSON",
+          "3RD PERSON",
+          "4TH PERSON",
+          "COPILOT"
+        ],
+        "EDGES": [
+          "aft_edge"
+        ]
+      }
+    ],
+    "combination_points": [
+      {
+        "ADDED": "MINIMUM WEIGHT",
+        "XBAR": 73.09239457101309,
+        "ZBAR": 90.72485700436258,
+        "WEIGHT": 2063.0,
+        "S1": 2063.0,
+        "LOADS": []
+      },
+      {
+        "ADDED": "COPILOT",
+        "XBAR": 73.23762203313927,
+        "ZBAR": 91.43098074339454,
+        "WEIGHT": 2233.0,
+        "S1": 2233.0,
+        "LOADS": [
+          "COPILOT"
+        ]
+      },
+      {
+        "ADDED": "3RD PERSON",
+        "XBAR": 75.97832960143306,
+        "ZBAR": 91.43098074339454,
+        "WEIGHT": 2233.0,
+        "S1": 2233.0,
+        "LOADS": [
+          "3RD PERSON"
+        ]
+      },
+      {
+        "ADDED": "4TH PERSON",
+        "XBAR": 75.97832960143306,
+        "ZBAR": 91.43098074339454,
+        "WEIGHT": 2233.0,
+        "S1": 2233.0,
+        "LOADS": [
+          "4TH PERSON"
+        ]
+      },
+      {
+        "ADDED": "5TH PERSON",
+        "XBAR": 78.94742946708465,
+        "ZBAR": 91.43098074339454,
+        "WEIGHT": 2233.0,
+        "S1": 2233.0,
+        "LOADS": [
+          "5TH PERSON"
+        ]
+      },
+      {
+        "ADDED": "6TH PERSON",
+        "XBAR": 78.94742946708465,
+        "ZBAR": 91.43098074339454,
+        "WEIGHT": 2233.0,
+        "S1": 2233.0,
+        "LOADS": [
+          "6TH PERSON"
+        ]
+      },
+      {
+        "ADDED": "FUEL TO FULL",
+        "XBAR": 72.58074838187703,
+        "ZBAR": 90.10856796116505,
+        "WEIGHT": 2472.0,
+        "S1": 2472.0,
+        "LOADS": [
+          "FUEL TO FULL"
+        ]
+      },
+      {
+        "ADDED": "BAGGAGE",
+        "XBAR": 78.96912963811269,
+        "ZBAR": 91.7844159413651,
+        "WEIGHT": 2183.0,
+        "S1": 2183.0,
+        "LOADS": [
+          "BAGGAGE"
+        ]
+      },
+      {
+        "ADDED": "3RD PERSON",
+        "XBAR": 75.90911776945485,
+        "ZBAR": 92.03719517270079,
+        "WEIGHT": 2403.0,
+        "S1": 2403.0,
+        "LOADS": [
+          "COPILOT",
+          "3RD PERSON"
+        ]
+      },
+      {
+        "ADDED": "4TH PERSON",
+        "XBAR": 75.90911776945485,
+        "ZBAR": 92.03719517270079,
+        "WEIGHT": 2403.0,
+        "S1": 2403.0,
+        "LOADS": [
+          "COPILOT",
+          "4TH PERSON"
+        ]
+      },
+      {
+        "ADDED": "5TH PERSON",
+        "XBAR": 78.66816895547234,
+        "ZBAR": 92.03719517270079,
+        "WEIGHT": 2403.0,
+        "S1": 2403.0,
+        "LOADS": [
+          "COPILOT",
+          "5TH PERSON"
+        ]
+      },
+      {
+        "ADDED": "6TH PERSON",
+        "XBAR": 78.66816895547234,
+        "ZBAR": 92.03719517270079,
+        "WEIGHT": 2403.0,
+        "S1": 2403.0,
+        "LOADS": [
+          "COPILOT",
+          "6TH PERSON"
+        ]
+      },
+      {
+        "ADDED": "FUEL TO FULL",
+        "XBAR": 72.7364155942468,
+        "ZBAR": 90.7450340651022,
+        "WEIGHT": 2642.0,
+        "S1": 2642.0,
+        "LOADS": [
+          "COPILOT",
+          "FUEL TO FULL"
+        ]
+      },
+      {
+        "ADDED": "BAGGAGE",
+        "XBAR": 78.68236719082023,
+        "ZBAR": 92.37797705057373,
+        "WEIGHT": 2353.0,
+        "S1": 2353.0,
+        "LOADS": [
+          "COPILOT",
+          "BAGGAGE"
+        ]
+      },
+      {
+        "ADDED": "4TH PERSON",
+        "XBAR": 78.4559342488556,
+        "ZBAR": 92.03719517270079,
+        "WEIGHT": 2403.0,
+        "S1": 2403.0,
+        "LOADS": [
+          "3RD PERSON",
+          "4TH PERSON"
+        ]
+      },
+      {
+        "ADDED": "5TH PERSON",
+        "XBAR": 81.21498543487309,
+        "ZBAR": 92.03719517270079,
+        "WEIGHT": 2403.0,
+        "S1": 2403.0,
+        "LOADS": [
+          "3RD PERSON",
+          "5TH PERSON"
+        ]
+      },
+      {
+        "ADDED": "6TH PERSON",
+        "XBAR": 81.21498543487309,
+        "ZBAR": 92.03719517270079,
+        "WEIGHT": 2403.0,
+        "S1": 2403.0,
+        "LOADS": [
+          "3RD PERSON",
+          "6TH PERSON"
+        ]
+      },
+      {
+        "ADDED": "FUEL TO FULL",
+        "XBAR": 75.05284254352763,
+        "ZBAR": 90.7450340651022,
+        "WEIGHT": 2642.0,
+        "S1": 2642.0,
+        "LOADS": [
+          "3RD PERSON",
+          "FUEL TO FULL"
+        ]
+      },
+      {
+        "ADDED": "BAGGAGE",
+        "XBAR": 81.28330216744583,
+        "ZBAR": 92.37797705057373,
+        "WEIGHT": 2353.0,
+        "S1": 2353.0,
+        "LOADS": [
+          "3RD PERSON",
+          "BAGGAGE"
+        ]
+      },
+      {
+        "ADDED": "5TH PERSON",
+        "XBAR": 81.21498543487309,
+        "ZBAR": 92.03719517270079,
+        "WEIGHT": 2403.0,
+        "S1": 2403.0,
+        "LOADS": [
+          "4TH PERSON",
+          "5TH PERSON"
+        ]
+      },
+      {
+        "ADDED": "6TH PERSON",
+        "XBAR": 81.21498543487309,
+        "ZBAR": 92.03719517270079,
+        "WEIGHT": 2403.0,
+        "S1": 2403.0,
+        "LOADS": [
+          "4TH PERSON",
+          "6TH PERSON"
+        ]
+      },
+      {
+        "ADDED": "FUEL TO FULL",
+        "XBAR": 75.05284254352763,
+        "ZBAR": 90.7450340651022,
+        "WEIGHT": 2642.0,
+        "S1": 2642.0,
+        "LOADS": [
+          "4TH PERSON",
+          "FUEL TO FULL"
+        ]
+      },
+      {
+        "ADDED": "BAGGAGE",
+        "XBAR": 81.28330216744583,
+        "ZBAR": 92.37797705057373,
+        "WEIGHT": 2353.0,
+        "S1": 2353.0,
+        "LOADS": [
+          "4TH PERSON",
+          "BAGGAGE"
+        ]
+      },
+      {
+        "ADDED": "6TH PERSON",
+        "XBAR": 83.97403662089056,
+        "ZBAR": 92.03719517270079,
+        "WEIGHT": 2403.0,
+        "S1": 2403.0,
+        "LOADS": [
+          "5TH PERSON",
+          "6TH PERSON"
+        ]
+      },
+      {
+        "ADDED": "FUEL TO FULL",
+        "XBAR": 77.56230507191522,
+        "ZBAR": 90.7450340651022,
+        "WEIGHT": 2642.0,
+        "S1": 2642.0,
+        "LOADS": [
+          "5TH PERSON",
+          "FUEL TO FULL"
+        ]
+      },
+      {
+        "ADDED": "BAGGAGE",
+        "XBAR": 84.10098172545688,
+        "ZBAR": 92.37797705057373,
+        "WEIGHT": 2353.0,
+        "S1": 2353.0,
+        "LOADS": [
+          "5TH PERSON",
+          "BAGGAGE"
+        ]
+      },
+      {
+        "ADDED": "FUEL TO FULL",
+        "XBAR": 77.56230507191522,
+        "ZBAR": 90.7450340651022,
+        "WEIGHT": 2642.0,
+        "S1": 2642.0,
+        "LOADS": [
+          "6TH PERSON",
+          "FUEL TO FULL"
+        ]
+      },
+      {
+        "ADDED": "BAGGAGE",
+        "XBAR": 84.10098172545688,
+        "ZBAR": 92.37797705057373,
+        "WEIGHT": 2353.0,
+        "S1": 2353.0,
+        "LOADS": [
+          "6TH PERSON",
+          "BAGGAGE"
+        ]
+      },
+      {
+        "ADDED": "BAGGAGE",
+        "XBAR": 77.55386188271605,
+        "ZBAR": 91.0294675925926,
+        "WEIGHT": 2592.0,
+        "S1": 2592.0,
+        "LOADS": [
+          "FUEL TO FULL",
+          "BAGGAGE"
+        ]
+      },
+      {
+        "ADDED": "4TH PERSON",
+        "XBAR": 78.22759813447338,
+        "ZBAR": 92.56330353672756,
+        "WEIGHT": 2573.0,
+        "S1": 2573.0,
+        "LOADS": [
+          "COPILOT",
+          "3RD PERSON",
+          "4TH PERSON"
+        ]
+      },
+      {
+        "ADDED": "5TH PERSON",
+        "XBAR": 80.80435678196658,
+        "ZBAR": 92.56330353672756,
+        "WEIGHT": 2573.0,
+        "S1": 2573.0,
+        "LOADS": [
+          "COPILOT",
+          "3RD PERSON",
+          "5TH PERSON"
+        ]
+      },
+      {
+        "ADDED": "6TH PERSON",
+        "XBAR": 80.80435678196658,
+        "ZBAR": 92.56330353672756,
+        "WEIGHT": 2573.0,
+        "S1": 2573.0,
+        "LOADS": [
+          "COPILOT",
+          "3RD PERSON",
+          "6TH PERSON"
+        ]
+      },
+      {
+        "ADDED": "FUEL TO FULL",
+        "XBAR": 75.0496479374111,
+        "ZBAR": 91.30454480796587,
+        "WEIGHT": 2812.0,
+        "S1": 2812.0,
+        "LOADS": [
+          "COPILOT",
+          "3RD PERSON",
+          "FUEL TO FULL"
+        ]
+      },
+      {
+        "ADDED": "BAGGAGE",
+        "XBAR": 80.85993261989695,
+        "ZBAR": 92.8915497423702,
+        "WEIGHT": 2523.0,
+        "S1": 2523.0,
+        "LOADS": [
+          "COPILOT",
+          "3RD PERSON",
+          "BAGGAGE"
+        ]
+      },
+      {
+        "ADDED": "5TH PERSON",
+        "XBAR": 80.80435678196658,
+        "ZBAR": 92.56330353672756,
+        "WEIGHT": 2573.0,
+        "S1": 2573.0,
+        "LOADS": [
+          "COPILOT",
+          "4TH PERSON",
+          "5TH PERSON"
+        ]
+      },
+      {
+        "ADDED": "6TH PERSON",
+        "XBAR": 80.80435678196658,
+        "ZBAR": 92.56330353672756,
+        "WEIGHT": 2573.0,
+        "S1": 2573.0,
+        "LOADS": [
+          "COPILOT",
+          "4TH PERSON",
+          "6TH PERSON"
+        ]
+      },
+      {
+        "ADDED": "FUEL TO FULL",
+        "XBAR": 75.0496479374111,
+        "ZBAR": 91.30454480796587,
+        "WEIGHT": 2812.0,
+        "S1": 2812.0,
+        "LOADS": [
+          "COPILOT",
+          "4TH PERSON",
+          "FUEL TO FULL"
+        ]
+      },
+      {
+        "ADDED": "BAGGAGE",
+        "XBAR": 80.85993261989695,
+        "ZBAR": 92.8915497423702,
+        "WEIGHT": 2523.0,
+        "S1": 2523.0,
+        "LOADS": [
+          "COPILOT",
+          "4TH PERSON",
+          "BAGGAGE"
+        ]
+      },
+      {
+        "ADDED": "6TH PERSON",
+        "XBAR": 83.38111542945978,
+        "ZBAR": 92.56330353672756,
+        "WEIGHT": 2573.0,
+        "S1": 2573.0,
+        "LOADS": [
+          "COPILOT",
+          "5TH PERSON",
+          "6TH PERSON"
+        ]
+      },
+      {
+        "ADDED": "FUEL TO FULL",
+        "XBAR": 77.40740042674254,
+        "ZBAR": 91.30454480796587,
+        "WEIGHT": 2812.0,
+        "S1": 2812.0,
+        "LOADS": [
+          "COPILOT",
+          "5TH PERSON",
+          "FUEL TO FULL"
+        ]
+      },
+      {
+        "ADDED": "BAGGAGE",
+        "XBAR": 83.48775663892192,
+        "ZBAR": 92.8915497423702,
+        "WEIGHT": 2523.0,
+        "S1": 2523.0,
+        "LOADS": [
+          "COPILOT",
+          "5TH PERSON",
+          "BAGGAGE"
+        ]
+      },
+      {
+        "ADDED": "FUEL TO FULL",
+        "XBAR": 77.40740042674254,
+        "ZBAR": 91.30454480796587,
+        "WEIGHT": 2812.0,
+        "S1": 2812.0,
+        "LOADS": [
+          "COPILOT",
+          "6TH PERSON",
+          "FUEL TO FULL"
+        ]
+      },
+      {
+        "ADDED": "BAGGAGE",
+        "XBAR": 83.48775663892192,
+        "ZBAR": 92.8915497423702,
+        "WEIGHT": 2523.0,
+        "S1": 2523.0,
+        "LOADS": [
+          "COPILOT",
+          "6TH PERSON",
+          "BAGGAGE"
+        ]
+      },
+      {
+        "ADDED": "BAGGAGE",
+        "XBAR": 77.39667270094135,
+        "ZBAR": 91.58160028964518,
+        "WEIGHT": 2762.0,
+        "S1": 2762.0,
+        "LOADS": [
+          "COPILOT",
+          "FUEL TO FULL",
+          "BAGGAGE"
+        ]
+      },
+      {
+        "ADDED": "5TH PERSON",
+        "XBAR": 83.18290322580646,
+        "ZBAR": 92.56330353672756,
+        "WEIGHT": 2573.0,
+        "S1": 2573.0,
+        "LOADS": [
+          "3RD PERSON",
+          "4TH PERSON",
+          "5TH PERSON"
+        ]
+      },
+      {
+        "ADDED": "6TH PERSON",
+        "XBAR": 83.18290322580646,
+        "ZBAR": 92.56330353672756,
+        "WEIGHT": 2573.0,
+        "S1": 2573.0,
+        "LOADS": [
+          "3RD PERSON",
+          "4TH PERSON",
+          "6TH PERSON"
+        ]
+      },
+      {
+        "ADDED": "FUEL TO FULL",
+        "XBAR": 77.22603485064012,
+        "ZBAR": 91.30454480796587,
+        "WEIGHT": 2812.0,
+        "S1": 2812.0,
+        "LOADS": [
+          "3RD PERSON",
+          "4TH PERSON",
+          "FUEL TO FULL"
+        ]
+      },
+      {
+        "ADDED": "BAGGAGE",
+        "XBAR": 83.28561632976616,
+        "ZBAR": 92.8915497423702,
+        "WEIGHT": 2523.0,
+        "S1": 2523.0,
+        "LOADS": [
+          "3RD PERSON",
+          "4TH PERSON",
+          "BAGGAGE"
+        ]
+      },
+      {
+        "ADDED": "6TH PERSON",
+        "XBAR": 85.75966187329966,
+        "ZBAR": 92.56330353672756,
+        "WEIGHT": 2573.0,
+        "S1": 2573.0,
+        "LOADS": [
+          "3RD PERSON",
+          "5TH PERSON",
+          "6TH PERSON"
+        ]
+      },
+      {
+        "ADDED": "FUEL TO FULL",
+        "XBAR": 79.58378733997155,
+        "ZBAR": 91.30454480796587,
+        "WEIGHT": 2812.0,
+        "S1": 2812.0,
+        "LOADS": [
+          "3RD PERSON",
+          "5TH PERSON",
+          "FUEL TO FULL"
+        ]
+      },
+      {
+        "ADDED": "BAGGAGE",
+        "XBAR": 85.91344034879113,
+        "ZBAR": 92.8915497423702,
+        "WEIGHT": 2523.0,
+        "S1": 2523.0,
+        "LOADS": [
+          "3RD PERSON",
+          "5TH PERSON",
+          "BAGGAGE"
+        ]
+      },
+      {
+        "ADDED": "FUEL TO FULL",
+        "XBAR": 79.58378733997155,
+        "ZBAR": 91.30454480796587,
+        "WEIGHT": 2812.0,
+        "S1": 2812.0,
+        "LOADS": [
+          "3RD PERSON",
+          "6TH PERSON",
+          "FUEL TO FULL"
+        ]
+      },
+      {
+        "ADDED": "BAGGAGE",
+        "XBAR": 85.91344034879113,
+        "ZBAR": 92.8915497423702,
+        "WEIGHT": 2523.0,
+        "S1": 2523.0,
+        "LOADS": [
+          "3RD PERSON",
+          "6TH PERSON",
+          "BAGGAGE"
+        ]
+      },
+      {
+        "ADDED": "BAGGAGE",
+        "XBAR": 79.61245836350471,
+        "ZBAR": 91.58160028964518,
+        "WEIGHT": 2762.0,
+        "S1": 2762.0,
+        "LOADS": [
+          "3RD PERSON",
+          "FUEL TO FULL",
+          "BAGGAGE"
+        ]
+      },
+      {
+        "ADDED": "6TH PERSON",
+        "XBAR": 85.75966187329966,
+        "ZBAR": 92.56330353672756,
+        "WEIGHT": 2573.0,
+        "S1": 2573.0,
+        "LOADS": [
+          "4TH PERSON",
+          "5TH PERSON",
+          "6TH PERSON"
+        ]
+      },
+      {
+        "ADDED": "FUEL TO FULL",
+        "XBAR": 79.58378733997155,
+        "ZBAR": 91.30454480796587,
+        "WEIGHT": 2812.0,
+        "S1": 2812.0,
+        "LOADS": [
+          "4TH PERSON",
+          "5TH PERSON",
+          "FUEL TO FULL"
+        ]
+      },
+      {
+        "ADDED": "BAGGAGE",
+        "XBAR": 85.91344034879113,
+        "ZBAR": 92.8915497423702,
+        "WEIGHT": 2523.0,
+        "S1": 2523.0,
+        "LOADS": [
+          "4TH PERSON",
+          "5TH PERSON",
+          "BAGGAGE"
+        ]
+      },
+      {
+        "ADDED": "FUEL TO FULL",
+        "XBAR": 79.58378733997155,
+        "ZBAR": 91.30454480796587,
+        "WEIGHT": 2812.0,
+        "S1": 2812.0,
+        "LOADS": [
+          "4TH PERSON",
+          "6TH PERSON",
+          "FUEL TO FULL"
+        ]
+      },
+      {
+        "ADDED": "BAGGAGE",
+        "XBAR": 85.91344034879113,
+        "ZBAR": 92.8915497423702,
+        "WEIGHT": 2523.0,
+        "S1": 2523.0,
+        "LOADS": [
+          "4TH PERSON",
+          "6TH PERSON",
+          "BAGGAGE"
+        ]
+      },
+      {
+        "ADDED": "BAGGAGE",
+        "XBAR": 79.61245836350471,
+        "ZBAR": 91.58160028964518,
+        "WEIGHT": 2762.0,
+        "S1": 2762.0,
+        "LOADS": [
+          "4TH PERSON",
+          "FUEL TO FULL",
+          "BAGGAGE"
+        ]
+      },
+      {
+        "ADDED": "FUEL TO FULL",
+        "XBAR": 81.941539829303,
+        "ZBAR": 91.30454480796587,
+        "WEIGHT": 2812.0,
+        "S1": 2812.0,
+        "LOADS": [
+          "5TH PERSON",
+          "6TH PERSON",
+          "FUEL TO FULL"
+        ]
+      },
+      {
+        "ADDED": "BAGGAGE",
+        "XBAR": 88.5412643678161,
+        "ZBAR": 92.8915497423702,
+        "WEIGHT": 2523.0,
+        "S1": 2523.0,
+        "LOADS": [
+          "5TH PERSON",
+          "6TH PERSON",
+          "BAGGAGE"
+        ]
+      },
+      {
+        "ADDED": "BAGGAGE",
+        "XBAR": 82.01289283128169,
+        "ZBAR": 91.58160028964518,
+        "WEIGHT": 2762.0,
+        "S1": 2762.0,
+        "LOADS": [
+          "5TH PERSON",
+          "FUEL TO FULL",
+          "BAGGAGE"
+        ]
+      },
+      {
+        "ADDED": "BAGGAGE",
+        "XBAR": 82.01289283128169,
+        "ZBAR": 91.58160028964518,
+        "WEIGHT": 2762.0,
+        "S1": 2762.0,
+        "LOADS": [
+          "6TH PERSON",
+          "FUEL TO FULL",
+          "BAGGAGE"
+        ]
+      },
+      {
+        "ADDED": "5TH PERSON",
+        "XBAR": 82.6757601166606,
+        "ZBAR": 93.02419978126139,
+        "WEIGHT": 2743.0,
+        "S1": 2743.0,
+        "LOADS": [
+          "COPILOT",
+          "3RD PERSON",
+          "4TH PERSON",
+          "5TH PERSON"
+        ]
+      },
+      {
+        "ADDED": "6TH PERSON",
+        "XBAR": 82.6757601166606,
+        "ZBAR": 93.02419978126139,
+        "WEIGHT": 2743.0,
+        "S1": 2743.0,
+        "LOADS": [
+          "COPILOT",
+          "3RD PERSON",
+          "4TH PERSON",
+          "6TH PERSON"
+        ]
+      },
+      {
+        "ADDED": "FUEL TO FULL",
+        "XBAR": 77.09913145539906,
+        "ZBAR": 91.8002615694165,
+        "WEIGHT": 2982.0,
+        "S1": 2982.0,
+        "LOADS": [
+          "COPILOT",
+          "3RD PERSON",
+          "4TH PERSON",
+          "FUEL TO FULL"
+        ]
+      },
+      {
+        "ADDED": "BAGGAGE",
+        "XBAR": 82.76257333828444,
+        "ZBAR": 93.34028221314519,
+        "WEIGHT": 2693.0,
+        "S1": 2693.0,
+        "LOADS": [
+          "COPILOT",
+          "3RD PERSON",
+          "4TH PERSON",
+          "BAGGAGE"
+        ]
+      },
+      {
+        "ADDED": "6TH PERSON",
+        "XBAR": 85.092821728035,
+        "ZBAR": 93.02419978126139,
+        "WEIGHT": 2743.0,
+        "S1": 2743.0,
+        "LOADS": [
+          "COPILOT",
+          "3RD PERSON",
+          "5TH PERSON",
+          "6TH PERSON"
+        ]
+      },
+      {
+        "ADDED": "FUEL TO FULL",
+        "XBAR": 79.32247149564051,
+        "ZBAR": 91.8002615694165,
+        "WEIGHT": 2982.0,
+        "S1": 2982.0,
+        "LOADS": [
+          "COPILOT",
+          "3RD PERSON",
+          "5TH PERSON",
+          "FUEL TO FULL"
+        ]
+      },
+      {
+        "ADDED": "BAGGAGE",
+        "XBAR": 85.22451169699221,
+        "ZBAR": 93.34028221314519,
+        "WEIGHT": 2693.0,
+        "S1": 2693.0,
+        "LOADS": [
+          "COPILOT",
+          "3RD PERSON",
+          "5TH PERSON",
+          "BAGGAGE"
+        ]
+      },
+      {
+        "ADDED": "FUEL TO FULL",
+        "XBAR": 79.32247149564051,
+        "ZBAR": 91.8002615694165,
+        "WEIGHT": 2982.0,
+        "S1": 2982.0,
+        "LOADS": [
+          "COPILOT",
+          "3RD PERSON",
+          "6TH PERSON",
+          "FUEL TO FULL"
+        ]
+      },
+      {
+        "ADDED": "BAGGAGE",
+        "XBAR": 85.22451169699221,
+        "ZBAR": 93.34028221314519,
+        "WEIGHT": 2693.0,
+        "S1": 2693.0,
+        "LOADS": [
+          "COPILOT",
+          "3RD PERSON",
+          "6TH PERSON",
+          "BAGGAGE"
+        ]
+      },
+      {
+        "ADDED": "BAGGAGE",
+        "XBAR": 79.3450238744884,
+        "ZBAR": 92.06970668485675,
+        "WEIGHT": 2932.0,
+        "S1": 2932.0,
+        "LOADS": [
+          "COPILOT",
+          "3RD PERSON",
+          "FUEL TO FULL",
+          "BAGGAGE"
+        ]
+      },
+      {
+        "ADDED": "6TH PERSON",
+        "XBAR": 85.092821728035,
+        "ZBAR": 93.02419978126139,
+        "WEIGHT": 2743.0,
+        "S1": 2743.0,
+        "LOADS": [
+          "COPILOT",
+          "4TH PERSON",
+          "5TH PERSON",
+          "6TH PERSON"
+        ]
+      },
+      {
+        "ADDED": "FUEL TO FULL",
+        "XBAR": 79.32247149564051,
+        "ZBAR": 91.8002615694165,
+        "WEIGHT": 2982.0,
+        "S1": 2982.0,
+        "LOADS": [
+          "COPILOT",
+          "4TH PERSON",
+          "5TH PERSON",
+          "FUEL TO FULL"
+        ]
+      },
+      {
+        "ADDED": "BAGGAGE",
+        "XBAR": 85.22451169699221,
+        "ZBAR": 93.34028221314519,
+        "WEIGHT": 2693.0,
+        "S1": 2693.0,
+        "LOADS": [
+          "COPILOT",
+          "4TH PERSON",
+          "5TH PERSON",
+          "BAGGAGE"
+        ]
+      },
+      {
+        "ADDED": "FUEL TO FULL",
+        "XBAR": 79.32247149564051,
+        "ZBAR": 91.8002615694165,
+        "WEIGHT": 2982.0,
+        "S1": 2982.0,
+        "LOADS": [
+          "COPILOT",
+          "4TH PERSON",
+          "6TH PERSON",
+          "FUEL TO FULL"
+        ]
+      },
+      {
+        "ADDED": "BAGGAGE",
+        "XBAR": 85.22451169699221,
+        "ZBAR": 93.34028221314519,
+        "WEIGHT": 2693.0,
+        "S1": 2693.0,
+        "LOADS": [
+          "COPILOT",
+          "4TH PERSON",
+          "6TH PERSON",
+          "BAGGAGE"
+        ]
+      },
+      {
+        "ADDED": "BAGGAGE",
+        "XBAR": 79.3450238744884,
+        "ZBAR": 92.06970668485675,
+        "WEIGHT": 2932.0,
+        "S1": 2932.0,
+        "LOADS": [
+          "COPILOT",
+          "4TH PERSON",
+          "FUEL TO FULL",
+          "BAGGAGE"
+        ]
+      },
+      {
+        "ADDED": "FUEL TO FULL",
+        "XBAR": 81.54581153588197,
+        "ZBAR": 91.8002615694165,
+        "WEIGHT": 2982.0,
+        "S1": 2982.0,
+        "LOADS": [
+          "COPILOT",
+          "5TH PERSON",
+          "6TH PERSON",
+          "FUEL TO FULL"
+        ]
+      },
+      {
+        "ADDED": "BAGGAGE",
+        "XBAR": 87.68645005569996,
+        "ZBAR": 93.34028221314519,
+        "WEIGHT": 2693.0,
+        "S1": 2693.0,
+        "LOADS": [
+          "COPILOT",
+          "5TH PERSON",
+          "6TH PERSON",
+          "BAGGAGE"
+        ]
+      },
+      {
+        "ADDED": "BAGGAGE",
+        "XBAR": 81.6062789904502,
+        "ZBAR": 92.06970668485675,
+        "WEIGHT": 2932.0,
+        "S1": 2932.0,
+        "LOADS": [
+          "COPILOT",
+          "5TH PERSON",
+          "FUEL TO FULL",
+          "BAGGAGE"
+        ]
+      },
+      {
+        "ADDED": "BAGGAGE",
+        "XBAR": 81.6062789904502,
+        "ZBAR": 92.06970668485675,
+        "WEIGHT": 2932.0,
+        "S1": 2932.0,
+        "LOADS": [
+          "COPILOT",
+          "6TH PERSON",
+          "FUEL TO FULL",
+          "BAGGAGE"
+        ]
+      },
+      {
+        "ADDED": "6TH PERSON",
+        "XBAR": 87.32395552314985,
+        "ZBAR": 93.02419978126139,
+        "WEIGHT": 2743.0,
+        "S1": 2743.0,
+        "LOADS": [
+          "3RD PERSON",
+          "4TH PERSON",
+          "5TH PERSON",
+          "6TH PERSON"
+        ]
+      },
+      {
+        "ADDED": "FUEL TO FULL",
+        "XBAR": 81.37478537894032,
+        "ZBAR": 91.8002615694165,
+        "WEIGHT": 2982.0,
+        "S1": 2982.0,
+        "LOADS": [
+          "3RD PERSON",
+          "4TH PERSON",
+          "5TH PERSON",
+          "FUEL TO FULL"
+        ]
+      },
+      {
+        "ADDED": "BAGGAGE",
+        "XBAR": 87.49707018195322,
+        "ZBAR": 93.34028221314519,
+        "WEIGHT": 2693.0,
+        "S1": 2693.0,
+        "LOADS": [
+          "3RD PERSON",
+          "4TH PERSON",
+          "5TH PERSON",
+          "BAGGAGE"
+        ]
+      },
+      {
+        "ADDED": "FUEL TO FULL",
+        "XBAR": 81.37478537894032,
+        "ZBAR": 91.8002615694165,
+        "WEIGHT": 2982.0,
+        "S1": 2982.0,
+        "LOADS": [
+          "3RD PERSON",
+          "4TH PERSON",
+          "6TH PERSON",
+          "FUEL TO FULL"
+        ]
+      },
+      {
+        "ADDED": "BAGGAGE",
+        "XBAR": 87.49707018195322,
+        "ZBAR": 93.34028221314519,
+        "WEIGHT": 2693.0,
+        "S1": 2693.0,
+        "LOADS": [
+          "3RD PERSON",
+          "4TH PERSON",
+          "6TH PERSON",
+          "BAGGAGE"
+        ]
+      },
+      {
+        "ADDED": "BAGGAGE",
+        "XBAR": 81.43233628922238,
+        "ZBAR": 92.06970668485675,
+        "WEIGHT": 2932.0,
+        "S1": 2932.0,
+        "LOADS": [
+          "3RD PERSON",
+          "4TH PERSON",
+          "FUEL TO FULL",
+          "BAGGAGE"
+        ]
+      },
+      {
+        "ADDED": "FUEL TO FULL",
+        "XBAR": 83.59812541918176,
+        "ZBAR": 91.8002615694165,
+        "WEIGHT": 2982.0,
+        "S1": 2982.0,
+        "LOADS": [
+          "3RD PERSON",
+          "5TH PERSON",
+          "6TH PERSON",
+          "FUEL TO FULL"
+        ]
+      },
+      {
+        "ADDED": "BAGGAGE",
+        "XBAR": 89.95900854066097,
+        "ZBAR": 93.34028221314519,
+        "WEIGHT": 2693.0,
+        "S1": 2693.0,
+        "LOADS": [
+          "3RD PERSON",
+          "5TH PERSON",
+          "6TH PERSON",
+          "BAGGAGE"
+        ]
+      },
+      {
+        "ADDED": "BAGGAGE",
+        "XBAR": 83.69359140518418,
+        "ZBAR": 92.06970668485675,
+        "WEIGHT": 2932.0,
+        "S1": 2932.0,
+        "LOADS": [
+          "3RD PERSON",
+          "5TH PERSON",
+          "FUEL TO FULL",
+          "BAGGAGE"
+        ]
+      },
+      {
+        "ADDED": "BAGGAGE",
+        "XBAR": 83.69359140518418,
+        "ZBAR": 92.06970668485675,
+        "WEIGHT": 2932.0,
+        "S1": 2932.0,
+        "LOADS": [
+          "3RD PERSON",
+          "6TH PERSON",
+          "FUEL TO FULL",
+          "BAGGAGE"
+        ]
+      },
+      {
+        "ADDED": "FUEL TO FULL",
+        "XBAR": 83.59812541918176,
+        "ZBAR": 91.8002615694165,
+        "WEIGHT": 2982.0,
+        "S1": 2982.0,
+        "LOADS": [
+          "4TH PERSON",
+          "5TH PERSON",
+          "6TH PERSON",
+          "FUEL TO FULL"
+        ]
+      },
+      {
+        "ADDED": "BAGGAGE",
+        "XBAR": 89.95900854066097,
+        "ZBAR": 93.34028221314519,
+        "WEIGHT": 2693.0,
+        "S1": 2693.0,
+        "LOADS": [
+          "4TH PERSON",
+          "5TH PERSON",
+          "6TH PERSON",
+          "BAGGAGE"
+        ]
+      },
+      {
+        "ADDED": "BAGGAGE",
+        "XBAR": 83.69359140518418,
+        "ZBAR": 92.06970668485675,
+        "WEIGHT": 2932.0,
+        "S1": 2932.0,
+        "LOADS": [
+          "4TH PERSON",
+          "5TH PERSON",
+          "FUEL TO FULL",
+          "BAGGAGE"
+        ]
+      },
+      {
+        "ADDED": "BAGGAGE",
+        "XBAR": 83.69359140518418,
+        "ZBAR": 92.06970668485675,
+        "WEIGHT": 2932.0,
+        "S1": 2932.0,
+        "LOADS": [
+          "4TH PERSON",
+          "6TH PERSON",
+          "FUEL TO FULL",
+          "BAGGAGE"
+        ]
+      },
+      {
+        "ADDED": "BAGGAGE",
+        "XBAR": 85.95484652114598,
+        "ZBAR": 92.06970668485675,
+        "WEIGHT": 2932.0,
+        "S1": 2932.0,
+        "LOADS": [
+          "5TH PERSON",
+          "6TH PERSON",
+          "FUEL TO FULL",
+          "BAGGAGE"
+        ]
+      },
+      {
+        "ADDED": "6TH PERSON",
+        "XBAR": 86.60474081702712,
+        "ZBAR": 93.43130106419498,
+        "WEIGHT": 2913.0,
+        "S1": 2913.0,
+        "LOADS": [
+          "COPILOT",
+          "3RD PERSON",
+          "4TH PERSON",
+          "5TH PERSON",
+          "6TH PERSON"
+        ]
+      },
+      {
+        "ADDED": "FUEL TO FULL",
+        "XBAR": 81.03096763959391,
+        "ZBAR": 92.24250634517766,
+        "WEIGHT": 3152.0,
+        "S1": 3152.0,
+        "LOADS": [
+          "COPILOT",
+          "3RD PERSON",
+          "4TH PERSON",
+          "5TH PERSON",
+          "FUEL TO FULL"
+        ]
+      },
+      {
+        "ADDED": "BAGGAGE",
+        "XBAR": 86.75501571777856,
+        "ZBAR": 93.73572476423332,
+        "WEIGHT": 2863.0,
+        "S1": 2863.0,
+        "LOADS": [
+          "COPILOT",
+          "3RD PERSON",
+          "4TH PERSON",
+          "5TH PERSON",
+          "BAGGAGE"
+        ]
+      },
+      {
+        "ADDED": "FUEL TO FULL",
+        "XBAR": 81.03096763959391,
+        "ZBAR": 92.24250634517766,
+        "WEIGHT": 3152.0,
+        "S1": 3152.0,
+        "LOADS": [
+          "COPILOT",
+          "3RD PERSON",
+          "4TH PERSON",
+          "6TH PERSON",
+          "FUEL TO FULL"
+        ]
+      },
+      {
+        "ADDED": "BAGGAGE",
+        "XBAR": 86.75501571777856,
+        "ZBAR": 93.73572476423332,
+        "WEIGHT": 2863.0,
+        "S1": 2863.0,
+        "LOADS": [
+          "COPILOT",
+          "3RD PERSON",
+          "4TH PERSON",
+          "6TH PERSON",
+          "BAGGAGE"
+        ]
+      },
+      {
+        "ADDED": "BAGGAGE",
+        "XBAR": 81.07982269503546,
+        "ZBAR": 92.50431334622824,
+        "WEIGHT": 3102.0,
+        "S1": 3102.0,
+        "LOADS": [
+          "COPILOT",
+          "3RD PERSON",
+          "4TH PERSON",
+          "FUEL TO FULL",
+          "BAGGAGE"
+        ]
+      },
+      {
+        "ADDED": "FUEL TO FULL",
+        "XBAR": 83.134394035533,
+        "ZBAR": 92.24250634517766,
+        "WEIGHT": 3152.0,
+        "S1": 3152.0,
+        "LOADS": [
+          "COPILOT",
+          "3RD PERSON",
+          "5TH PERSON",
+          "6TH PERSON",
+          "FUEL TO FULL"
+        ]
+      },
+      {
+        "ADDED": "BAGGAGE",
+        "XBAR": 89.07076842472931,
+        "ZBAR": 93.73572476423332,
+        "WEIGHT": 2863.0,
+        "S1": 2863.0,
+        "LOADS": [
+          "COPILOT",
+          "3RD PERSON",
+          "5TH PERSON",
+          "6TH PERSON",
+          "BAGGAGE"
+        ]
+      },
+      {
+        "ADDED": "BAGGAGE",
+        "XBAR": 83.2171534493875,
+        "ZBAR": 92.50431334622824,
+        "WEIGHT": 3102.0,
+        "S1": 3102.0,
+        "LOADS": [
+          "COPILOT",
+          "3RD PERSON",
+          "5TH PERSON",
+          "FUEL TO FULL",
+          "BAGGAGE"
+        ]
+      },
+      {
+        "ADDED": "BAGGAGE",
+        "XBAR": 83.2171534493875,
+        "ZBAR": 92.50431334622824,
+        "WEIGHT": 3102.0,
+        "S1": 3102.0,
+        "LOADS": [
+          "COPILOT",
+          "3RD PERSON",
+          "6TH PERSON",
+          "FUEL TO FULL",
+          "BAGGAGE"
+        ]
+      },
+      {
+        "ADDED": "FUEL TO FULL",
+        "XBAR": 83.134394035533,
+        "ZBAR": 92.24250634517766,
+        "WEIGHT": 3152.0,
+        "S1": 3152.0,
+        "LOADS": [
+          "COPILOT",
+          "4TH PERSON",
+          "5TH PERSON",
+          "6TH PERSON",
+          "FUEL TO FULL"
+        ]
+      },
+      {
+        "ADDED": "BAGGAGE",
+        "XBAR": 89.07076842472931,
+        "ZBAR": 93.73572476423332,
+        "WEIGHT": 2863.0,
+        "S1": 2863.0,
+        "LOADS": [
+          "COPILOT",
+          "4TH PERSON",
+          "5TH PERSON",
+          "6TH PERSON",
+          "BAGGAGE"
+        ]
+      },
+      {
+        "ADDED": "BAGGAGE",
+        "XBAR": 83.2171534493875,
+        "ZBAR": 92.50431334622824,
+        "WEIGHT": 3102.0,
+        "S1": 3102.0,
+        "LOADS": [
+          "COPILOT",
+          "4TH PERSON",
+          "5TH PERSON",
+          "FUEL TO FULL",
+          "BAGGAGE"
+        ]
+      },
+      {
+        "ADDED": "BAGGAGE",
+        "XBAR": 83.2171534493875,
+        "ZBAR": 92.50431334622824,
+        "WEIGHT": 3102.0,
+        "S1": 3102.0,
+        "LOADS": [
+          "COPILOT",
+          "4TH PERSON",
+          "6TH PERSON",
+          "FUEL TO FULL",
+          "BAGGAGE"
+        ]
+      },
+      {
+        "ADDED": "BAGGAGE",
+        "XBAR": 85.35448420373952,
+        "ZBAR": 92.50431334622824,
+        "WEIGHT": 3102.0,
+        "S1": 3102.0,
+        "LOADS": [
+          "COPILOT",
+          "5TH PERSON",
+          "6TH PERSON",
+          "FUEL TO FULL",
+          "BAGGAGE"
+        ]
+      },
+      {
+        "ADDED": "FUEL TO FULL",
+        "XBAR": 85.07601840101522,
+        "ZBAR": 92.24250634517766,
+        "WEIGHT": 3152.0,
+        "S1": 3152.0,
+        "LOADS": [
+          "3RD PERSON",
+          "4TH PERSON",
+          "5TH PERSON",
+          "6TH PERSON",
+          "FUEL TO FULL"
+        ]
+      },
+      {
+        "ADDED": "BAGGAGE",
+        "XBAR": 91.20838630806847,
+        "ZBAR": 93.73572476423332,
+        "WEIGHT": 2863.0,
+        "S1": 2863.0,
+        "LOADS": [
+          "3RD PERSON",
+          "4TH PERSON",
+          "5TH PERSON",
+          "6TH PERSON",
+          "BAGGAGE"
+        ]
+      },
+      {
+        "ADDED": "BAGGAGE",
+        "XBAR": 85.19007414571244,
+        "ZBAR": 92.50431334622824,
+        "WEIGHT": 3102.0,
+        "S1": 3102.0,
+        "LOADS": [
+          "3RD PERSON",
+          "4TH PERSON",
+          "5TH PERSON",
+          "FUEL TO FULL",
+          "BAGGAGE"
+        ]
+      },
+      {
+        "ADDED": "BAGGAGE",
+        "XBAR": 85.19007414571244,
+        "ZBAR": 92.50431334622824,
+        "WEIGHT": 3102.0,
+        "S1": 3102.0,
+        "LOADS": [
+          "3RD PERSON",
+          "4TH PERSON",
+          "6TH PERSON",
+          "FUEL TO FULL",
+          "BAGGAGE"
+        ]
+      },
+      {
+        "ADDED": "BAGGAGE",
+        "XBAR": 87.32740490006447,
+        "ZBAR": 92.50431334622824,
+        "WEIGHT": 3102.0,
+        "S1": 3102.0,
+        "LOADS": [
+          "3RD PERSON",
+          "5TH PERSON",
+          "6TH PERSON",
+          "FUEL TO FULL",
+          "BAGGAGE"
+        ]
+      },
+      {
+        "ADDED": "BAGGAGE",
+        "XBAR": 87.32740490006447,
+        "ZBAR": 92.50431334622824,
+        "WEIGHT": 3102.0,
+        "S1": 3102.0,
+        "LOADS": [
+          "4TH PERSON",
+          "5TH PERSON",
+          "6TH PERSON",
+          "FUEL TO FULL",
+          "BAGGAGE"
+        ]
+      },
+      {
+        "ADDED": "FUEL TO FULL",
+        "XBAR": 84.56038832028898,
+        "ZBAR": 92.63948826008429,
+        "WEIGHT": 3322.0,
+        "S1": 3322.0,
+        "LOADS": [
+          "COPILOT",
+          "3RD PERSON",
+          "4TH PERSON",
+          "5TH PERSON",
+          "6TH PERSON",
+          "FUEL TO FULL"
+        ]
+      },
+      {
+        "ADDED": "BAGGAGE",
+        "XBAR": 90.29990438509726,
+        "ZBAR": 94.08683811407847,
+        "WEIGHT": 3033.0,
+        "S1": 3033.0,
+        "LOADS": [
+          "COPILOT",
+          "3RD PERSON",
+          "4TH PERSON",
+          "5TH PERSON",
+          "6TH PERSON",
+          "BAGGAGE"
+        ]
+      },
+      {
+        "ADDED": "BAGGAGE",
+        "XBAR": 84.66063875305623,
+        "ZBAR": 92.89375916870416,
+        "WEIGHT": 3272.0,
+        "S1": 3272.0,
+        "LOADS": [
+          "COPILOT",
+          "3RD PERSON",
+          "4TH PERSON",
+          "5TH PERSON",
+          "FUEL TO FULL",
+          "BAGGAGE"
+        ]
+      },
+      {
+        "ADDED": "BAGGAGE",
+        "XBAR": 84.66063875305623,
+        "ZBAR": 92.89375916870416,
+        "WEIGHT": 3272.0,
+        "S1": 3272.0,
+        "LOADS": [
+          "COPILOT",
+          "3RD PERSON",
+          "4TH PERSON",
+          "6TH PERSON",
+          "FUEL TO FULL",
+          "BAGGAGE"
+        ]
+      },
+      {
+        "ADDED": "BAGGAGE",
+        "XBAR": 86.68692237163813,
+        "ZBAR": 92.89375916870416,
+        "WEIGHT": 3272.0,
+        "S1": 3272.0,
+        "LOADS": [
+          "COPILOT",
+          "3RD PERSON",
+          "5TH PERSON",
+          "6TH PERSON",
+          "FUEL TO FULL",
+          "BAGGAGE"
+        ]
+      },
+      {
+        "ADDED": "BAGGAGE",
+        "XBAR": 86.68692237163813,
+        "ZBAR": 92.89375916870416,
+        "WEIGHT": 3272.0,
+        "S1": 3272.0,
+        "LOADS": [
+          "COPILOT",
+          "4TH PERSON",
+          "5TH PERSON",
+          "6TH PERSON",
+          "FUEL TO FULL",
+          "BAGGAGE"
+        ]
+      },
+      {
+        "ADDED": "BAGGAGE",
+        "XBAR": 88.5573380195599,
+        "ZBAR": 92.89375916870416,
+        "WEIGHT": 3272.0,
+        "S1": 3272.0,
+        "LOADS": [
+          "3RD PERSON",
+          "4TH PERSON",
+          "5TH PERSON",
+          "6TH PERSON",
+          "FUEL TO FULL",
+          "BAGGAGE"
+        ]
+      },
+      {
+        "ADDED": "BAGGAGE",
+        "XBAR": 87.88774259151656,
+        "ZBAR": 93.24473561882627,
+        "WEIGHT": 3442.0,
+        "S1": 3442.0,
+        "LOADS": [
+          "COPILOT",
+          "3RD PERSON",
+          "4TH PERSON",
+          "5TH PERSON",
+          "6TH PERSON",
+          "FUEL TO FULL",
+          "BAGGAGE"
+        ]
+      }
+    ],
+    "load_groups": {
+      "empty_weight_items": [
+        "WING, OUTBOARD",
+        "HORIZ TAIL",
+        "VERT TAIL",
+        "MAIN GEAR WHE",
+        "MAIN GEAR STRU",
+        "NOSE GEAR WHE",
+        "NOSE GEAR STRU",
+        "FLIGHT CONTROL",
+        "NACELLE",
+        "ENGINE INSTALL",
+        "PROPELLER",
+        "SYSTEMS",
+        "FURNISHINGS",
+        "UNUSABLE FUEL",
+        "FSELAGE STRUC"
+      ],
+      "minimum_weight_items": [
+        "WING, OUTBOARD",
+        "HORIZ TAIL",
+        "VERT TAIL",
+        "MAIN GEAR WHE",
+        "MAIN GEAR STRU",
+        "NOSE GEAR WHE",
+        "NOSE GEAR STRU",
+        "FLIGHT CONTROL",
+        "NACELLE",
+        "ENGINE INSTALL",
+        "PROPELLER",
+        "SYSTEMS",
+        "FURNISHINGS",
+        "UNUSABLE FUEL",
+        "FSELAGE STRUC",
+        "PILOT",
+        "30 MIN N E L"
+      ],
+      "discretionary_load_items": [
+        "COPILOT",
+        "3RD PERSON",
+        "4TH PERSON",
+        "5TH PERSON",
+        "6TH PERSON",
+        "FUEL TO FULL",
+        "BAGGAGE"
+      ],
+      "excluded_items": []
+    },
+    "forward_edge": [
+      {
+        "ADDED": "MINIMUM WEIGHT",
+        "XBAR": 73.09239457101309,
+        "ZBAR": 90.72485700436258,
+        "WEIGHT": 2063.0,
+        "S1": 2063.0,
+        "LOADS": [],
+        "POINT_ID": 1
+      },
+      {
+        "ADDED": "FUEL TO FULL",
+        "XBAR": 72.58074838187703,
+        "ZBAR": 90.10856796116505,
+        "WEIGHT": 2472.0,
+        "S1": 2472.0,
+        "LOADS": [
+          "FUEL TO FULL"
+        ],
+        "POINT_ID": 2
+      },
+      {
+        "ADDED": "COPILOT",
+        "XBAR": 72.7364155942468,
+        "ZBAR": 90.7450340651022,
+        "WEIGHT": 2642.0,
+        "S1": 2642.0,
+        "LOADS": [
+          "FUEL TO FULL",
+          "COPILOT"
+        ],
+        "POINT_ID": 3
+      },
+      {
+        "ADDED": "4TH PERSON",
+        "XBAR": 75.0496479374111,
+        "ZBAR": 91.30454480796587,
+        "WEIGHT": 2812.0,
+        "S1": 2812.0,
+        "LOADS": [
+          "FUEL TO FULL",
+          "COPILOT",
+          "4TH PERSON"
+        ],
+        "POINT_ID": 4
+      },
+      {
+        "ADDED": "3RD PERSON",
+        "XBAR": 77.09913145539906,
+        "ZBAR": 91.8002615694165,
+        "WEIGHT": 2982.0,
+        "S1": 2982.0,
+        "LOADS": [
+          "FUEL TO FULL",
+          "COPILOT",
+          "4TH PERSON",
+          "3RD PERSON"
+        ],
+        "POINT_ID": 5
+      },
+      {
+        "ADDED": "6TH PERSON",
+        "XBAR": 81.03096763959391,
+        "ZBAR": 92.24250634517766,
+        "WEIGHT": 3152.0,
+        "S1": 3152.0,
+        "LOADS": [
+          "FUEL TO FULL",
+          "COPILOT",
+          "4TH PERSON",
+          "3RD PERSON",
+          "6TH PERSON"
+        ],
+        "POINT_ID": 6
+      },
+      {
+        "ADDED": "5TH PERSON",
+        "XBAR": 84.56038832028898,
+        "ZBAR": 92.63948826008429,
+        "WEIGHT": 3322.0,
+        "S1": 3322.0,
+        "LOADS": [
+          "FUEL TO FULL",
+          "COPILOT",
+          "4TH PERSON",
+          "3RD PERSON",
+          "6TH PERSON",
+          "5TH PERSON"
+        ],
+        "POINT_ID": 7
+      },
+      {
+        "ADDED": "BAGGAGE",
+        "XBAR": 87.88774259151656,
+        "ZBAR": 93.24473561882627,
+        "WEIGHT": 3442.0,
+        "S1": 3442.0,
+        "LOADS": [
+          "FUEL TO FULL",
+          "COPILOT",
+          "4TH PERSON",
+          "3RD PERSON",
+          "6TH PERSON",
+          "5TH PERSON",
+          "BAGGAGE"
+        ],
+        "POINT_ID": 8
+      }
+    ],
+    "aft_edge": [
+      {
+        "ADDED": "MINIMUM WEIGHT",
+        "XBAR": 73.09239457101309,
+        "ZBAR": 90.72485700436258,
+        "WEIGHT": 2063.0,
+        "S1": 2063.0,
+        "LOADS": [],
+        "POINT_ID": 1
+      },
+      {
+        "ADDED": "BAGGAGE",
+        "XBAR": 78.96912963811269,
+        "ZBAR": 91.7844159413651,
+        "WEIGHT": 2183.0,
+        "S1": 2183.0,
+        "LOADS": [
+          "BAGGAGE"
+        ],
+        "POINT_ID": 9
+      },
+      {
+        "ADDED": "5TH PERSON",
+        "XBAR": 84.10098172545688,
+        "ZBAR": 92.37797705057373,
+        "WEIGHT": 2353.0,
+        "S1": 2353.0,
+        "LOADS": [
+          "BAGGAGE",
+          "5TH PERSON"
+        ],
+        "POINT_ID": 10
+      },
+      {
+        "ADDED": "6TH PERSON",
+        "XBAR": 88.5412643678161,
+        "ZBAR": 92.8915497423702,
+        "WEIGHT": 2523.0,
+        "S1": 2523.0,
+        "LOADS": [
+          "BAGGAGE",
+          "5TH PERSON",
+          "6TH PERSON"
+        ],
+        "POINT_ID": 11
+      },
+      {
+        "ADDED": "3RD PERSON",
+        "XBAR": 89.95900854066097,
+        "ZBAR": 93.34028221314519,
+        "WEIGHT": 2693.0,
+        "S1": 2693.0,
+        "LOADS": [
+          "BAGGAGE",
+          "5TH PERSON",
+          "6TH PERSON",
+          "3RD PERSON"
+        ],
+        "POINT_ID": 12
+      },
+      {
+        "ADDED": "4TH PERSON",
+        "XBAR": 91.20838630806847,
+        "ZBAR": 93.73572476423332,
+        "WEIGHT": 2863.0,
+        "S1": 2863.0,
+        "LOADS": [
+          "BAGGAGE",
+          "5TH PERSON",
+          "6TH PERSON",
+          "3RD PERSON",
+          "4TH PERSON"
+        ],
+        "POINT_ID": 13
+      },
+      {
+        "ADDED": "COPILOT",
+        "XBAR": 90.29990438509726,
+        "ZBAR": 94.08683811407847,
+        "WEIGHT": 3033.0,
+        "S1": 3033.0,
+        "LOADS": [
+          "BAGGAGE",
+          "5TH PERSON",
+          "6TH PERSON",
+          "3RD PERSON",
+          "4TH PERSON",
+          "COPILOT"
+        ],
+        "POINT_ID": 14
+      },
+      {
+        "ADDED": "FUEL TO FULL",
+        "XBAR": 87.88774259151656,
+        "ZBAR": 93.24473561882627,
+        "WEIGHT": 3442.0,
+        "S1": 3442.0,
+        "LOADS": [
+          "BAGGAGE",
+          "5TH PERSON",
+          "6TH PERSON",
+          "3RD PERSON",
+          "4TH PERSON",
+          "COPILOT",
+          "FUEL TO FULL"
+        ],
+        "POINT_ID": 8
+      }
+    ],
+    "plot_data": {
+      "title": "USEFUL LOAD ENVELOPE AND STRUCTURAL LIMITS",
+      "x_axis": "Fuselage Station",
+      "y_axis": "Weight",
+      "x_value": "XBAR",
+      "y_value": "WEIGHT",
+      "basic_points": [
+        {
+          "x": 73.03491218441275,
+          "y": 1822.0,
+          "label": "EMPTY WEIGHT"
+        },
+        {
+          "x": 73.2026154618474,
+          "y": 1992.0,
+          "label": "PILOT"
+        },
+        {
+          "x": 73.09239457101309,
+          "y": 2063.0,
+          "label": "MINIMUM WEIGHT"
+        }
+      ],
+      "combination_points": [
+        {
+          "x": 73.09239457101309,
+          "y": 2063.0,
+          "label": "MINIMUM WEIGHT",
+          "loads": []
+        },
+        {
+          "x": 73.23762203313927,
+          "y": 2233.0,
+          "label": "COPILOT",
+          "loads": [
+            "COPILOT"
+          ]
+        },
+        {
+          "x": 75.97832960143306,
+          "y": 2233.0,
+          "label": "3RD PERSON",
+          "loads": [
+            "3RD PERSON"
+          ]
+        },
+        {
+          "x": 75.97832960143306,
+          "y": 2233.0,
+          "label": "4TH PERSON",
+          "loads": [
+            "4TH PERSON"
+          ]
+        },
+        {
+          "x": 78.94742946708465,
+          "y": 2233.0,
+          "label": "5TH PERSON",
+          "loads": [
+            "5TH PERSON"
+          ]
+        },
+        {
+          "x": 78.94742946708465,
+          "y": 2233.0,
+          "label": "6TH PERSON",
+          "loads": [
+            "6TH PERSON"
+          ]
+        },
+        {
+          "x": 72.58074838187703,
+          "y": 2472.0,
+          "label": "FUEL TO FULL",
+          "loads": [
+            "FUEL TO FULL"
+          ]
+        },
+        {
+          "x": 78.96912963811269,
+          "y": 2183.0,
+          "label": "BAGGAGE",
+          "loads": [
+            "BAGGAGE"
+          ]
+        },
+        {
+          "x": 75.90911776945485,
+          "y": 2403.0,
+          "label": "3RD PERSON",
+          "loads": [
+            "COPILOT",
+            "3RD PERSON"
+          ]
+        },
+        {
+          "x": 75.90911776945485,
+          "y": 2403.0,
+          "label": "4TH PERSON",
+          "loads": [
+            "COPILOT",
+            "4TH PERSON"
+          ]
+        },
+        {
+          "x": 78.66816895547234,
+          "y": 2403.0,
+          "label": "5TH PERSON",
+          "loads": [
+            "COPILOT",
+            "5TH PERSON"
+          ]
+        },
+        {
+          "x": 78.66816895547234,
+          "y": 2403.0,
+          "label": "6TH PERSON",
+          "loads": [
+            "COPILOT",
+            "6TH PERSON"
+          ]
+        },
+        {
+          "x": 72.7364155942468,
+          "y": 2642.0,
+          "label": "FUEL TO FULL",
+          "loads": [
+            "COPILOT",
+            "FUEL TO FULL"
+          ]
+        },
+        {
+          "x": 78.68236719082023,
+          "y": 2353.0,
+          "label": "BAGGAGE",
+          "loads": [
+            "COPILOT",
+            "BAGGAGE"
+          ]
+        },
+        {
+          "x": 78.4559342488556,
+          "y": 2403.0,
+          "label": "4TH PERSON",
+          "loads": [
+            "3RD PERSON",
+            "4TH PERSON"
+          ]
+        },
+        {
+          "x": 81.21498543487309,
+          "y": 2403.0,
+          "label": "5TH PERSON",
+          "loads": [
+            "3RD PERSON",
+            "5TH PERSON"
+          ]
+        },
+        {
+          "x": 81.21498543487309,
+          "y": 2403.0,
+          "label": "6TH PERSON",
+          "loads": [
+            "3RD PERSON",
+            "6TH PERSON"
+          ]
+        },
+        {
+          "x": 75.05284254352763,
+          "y": 2642.0,
+          "label": "FUEL TO FULL",
+          "loads": [
+            "3RD PERSON",
+            "FUEL TO FULL"
+          ]
+        },
+        {
+          "x": 81.28330216744583,
+          "y": 2353.0,
+          "label": "BAGGAGE",
+          "loads": [
+            "3RD PERSON",
+            "BAGGAGE"
+          ]
+        },
+        {
+          "x": 81.21498543487309,
+          "y": 2403.0,
+          "label": "5TH PERSON",
+          "loads": [
+            "4TH PERSON",
+            "5TH PERSON"
+          ]
+        },
+        {
+          "x": 81.21498543487309,
+          "y": 2403.0,
+          "label": "6TH PERSON",
+          "loads": [
+            "4TH PERSON",
+            "6TH PERSON"
+          ]
+        },
+        {
+          "x": 75.05284254352763,
+          "y": 2642.0,
+          "label": "FUEL TO FULL",
+          "loads": [
+            "4TH PERSON",
+            "FUEL TO FULL"
+          ]
+        },
+        {
+          "x": 81.28330216744583,
+          "y": 2353.0,
+          "label": "BAGGAGE",
+          "loads": [
+            "4TH PERSON",
+            "BAGGAGE"
+          ]
+        },
+        {
+          "x": 83.97403662089056,
+          "y": 2403.0,
+          "label": "6TH PERSON",
+          "loads": [
+            "5TH PERSON",
+            "6TH PERSON"
+          ]
+        },
+        {
+          "x": 77.56230507191522,
+          "y": 2642.0,
+          "label": "FUEL TO FULL",
+          "loads": [
+            "5TH PERSON",
+            "FUEL TO FULL"
+          ]
+        },
+        {
+          "x": 84.10098172545688,
+          "y": 2353.0,
+          "label": "BAGGAGE",
+          "loads": [
+            "5TH PERSON",
+            "BAGGAGE"
+          ]
+        },
+        {
+          "x": 77.56230507191522,
+          "y": 2642.0,
+          "label": "FUEL TO FULL",
+          "loads": [
+            "6TH PERSON",
+            "FUEL TO FULL"
+          ]
+        },
+        {
+          "x": 84.10098172545688,
+          "y": 2353.0,
+          "label": "BAGGAGE",
+          "loads": [
+            "6TH PERSON",
+            "BAGGAGE"
+          ]
+        },
+        {
+          "x": 77.55386188271605,
+          "y": 2592.0,
+          "label": "BAGGAGE",
+          "loads": [
+            "FUEL TO FULL",
+            "BAGGAGE"
+          ]
+        },
+        {
+          "x": 78.22759813447338,
+          "y": 2573.0,
+          "label": "4TH PERSON",
+          "loads": [
+            "COPILOT",
+            "3RD PERSON",
+            "4TH PERSON"
+          ]
+        },
+        {
+          "x": 80.80435678196658,
+          "y": 2573.0,
+          "label": "5TH PERSON",
+          "loads": [
+            "COPILOT",
+            "3RD PERSON",
+            "5TH PERSON"
+          ]
+        },
+        {
+          "x": 80.80435678196658,
+          "y": 2573.0,
+          "label": "6TH PERSON",
+          "loads": [
+            "COPILOT",
+            "3RD PERSON",
+            "6TH PERSON"
+          ]
+        },
+        {
+          "x": 75.0496479374111,
+          "y": 2812.0,
+          "label": "FUEL TO FULL",
+          "loads": [
+            "COPILOT",
+            "3RD PERSON",
+            "FUEL TO FULL"
+          ]
+        },
+        {
+          "x": 80.85993261989695,
+          "y": 2523.0,
+          "label": "BAGGAGE",
+          "loads": [
+            "COPILOT",
+            "3RD PERSON",
+            "BAGGAGE"
+          ]
+        },
+        {
+          "x": 80.80435678196658,
+          "y": 2573.0,
+          "label": "5TH PERSON",
+          "loads": [
+            "COPILOT",
+            "4TH PERSON",
+            "5TH PERSON"
+          ]
+        },
+        {
+          "x": 80.80435678196658,
+          "y": 2573.0,
+          "label": "6TH PERSON",
+          "loads": [
+            "COPILOT",
+            "4TH PERSON",
+            "6TH PERSON"
+          ]
+        },
+        {
+          "x": 75.0496479374111,
+          "y": 2812.0,
+          "label": "FUEL TO FULL",
+          "loads": [
+            "COPILOT",
+            "4TH PERSON",
+            "FUEL TO FULL"
+          ]
+        },
+        {
+          "x": 80.85993261989695,
+          "y": 2523.0,
+          "label": "BAGGAGE",
+          "loads": [
+            "COPILOT",
+            "4TH PERSON",
+            "BAGGAGE"
+          ]
+        },
+        {
+          "x": 83.38111542945978,
+          "y": 2573.0,
+          "label": "6TH PERSON",
+          "loads": [
+            "COPILOT",
+            "5TH PERSON",
+            "6TH PERSON"
+          ]
+        },
+        {
+          "x": 77.40740042674254,
+          "y": 2812.0,
+          "label": "FUEL TO FULL",
+          "loads": [
+            "COPILOT",
+            "5TH PERSON",
+            "FUEL TO FULL"
+          ]
+        },
+        {
+          "x": 83.48775663892192,
+          "y": 2523.0,
+          "label": "BAGGAGE",
+          "loads": [
+            "COPILOT",
+            "5TH PERSON",
+            "BAGGAGE"
+          ]
+        },
+        {
+          "x": 77.40740042674254,
+          "y": 2812.0,
+          "label": "FUEL TO FULL",
+          "loads": [
+            "COPILOT",
+            "6TH PERSON",
+            "FUEL TO FULL"
+          ]
+        },
+        {
+          "x": 83.48775663892192,
+          "y": 2523.0,
+          "label": "BAGGAGE",
+          "loads": [
+            "COPILOT",
+            "6TH PERSON",
+            "BAGGAGE"
+          ]
+        },
+        {
+          "x": 77.39667270094135,
+          "y": 2762.0,
+          "label": "BAGGAGE",
+          "loads": [
+            "COPILOT",
+            "FUEL TO FULL",
+            "BAGGAGE"
+          ]
+        },
+        {
+          "x": 83.18290322580646,
+          "y": 2573.0,
+          "label": "5TH PERSON",
+          "loads": [
+            "3RD PERSON",
+            "4TH PERSON",
+            "5TH PERSON"
+          ]
+        },
+        {
+          "x": 83.18290322580646,
+          "y": 2573.0,
+          "label": "6TH PERSON",
+          "loads": [
+            "3RD PERSON",
+            "4TH PERSON",
+            "6TH PERSON"
+          ]
+        },
+        {
+          "x": 77.22603485064012,
+          "y": 2812.0,
+          "label": "FUEL TO FULL",
+          "loads": [
+            "3RD PERSON",
+            "4TH PERSON",
+            "FUEL TO FULL"
+          ]
+        },
+        {
+          "x": 83.28561632976616,
+          "y": 2523.0,
+          "label": "BAGGAGE",
+          "loads": [
+            "3RD PERSON",
+            "4TH PERSON",
+            "BAGGAGE"
+          ]
+        },
+        {
+          "x": 85.75966187329966,
+          "y": 2573.0,
+          "label": "6TH PERSON",
+          "loads": [
+            "3RD PERSON",
+            "5TH PERSON",
+            "6TH PERSON"
+          ]
+        },
+        {
+          "x": 79.58378733997155,
+          "y": 2812.0,
+          "label": "FUEL TO FULL",
+          "loads": [
+            "3RD PERSON",
+            "5TH PERSON",
+            "FUEL TO FULL"
+          ]
+        },
+        {
+          "x": 85.91344034879113,
+          "y": 2523.0,
+          "label": "BAGGAGE",
+          "loads": [
+            "3RD PERSON",
+            "5TH PERSON",
+            "BAGGAGE"
+          ]
+        },
+        {
+          "x": 79.58378733997155,
+          "y": 2812.0,
+          "label": "FUEL TO FULL",
+          "loads": [
+            "3RD PERSON",
+            "6TH PERSON",
+            "FUEL TO FULL"
+          ]
+        },
+        {
+          "x": 85.91344034879113,
+          "y": 2523.0,
+          "label": "BAGGAGE",
+          "loads": [
+            "3RD PERSON",
+            "6TH PERSON",
+            "BAGGAGE"
+          ]
+        },
+        {
+          "x": 79.61245836350471,
+          "y": 2762.0,
+          "label": "BAGGAGE",
+          "loads": [
+            "3RD PERSON",
+            "FUEL TO FULL",
+            "BAGGAGE"
+          ]
+        },
+        {
+          "x": 85.75966187329966,
+          "y": 2573.0,
+          "label": "6TH PERSON",
+          "loads": [
+            "4TH PERSON",
+            "5TH PERSON",
+            "6TH PERSON"
+          ]
+        },
+        {
+          "x": 79.58378733997155,
+          "y": 2812.0,
+          "label": "FUEL TO FULL",
+          "loads": [
+            "4TH PERSON",
+            "5TH PERSON",
+            "FUEL TO FULL"
+          ]
+        },
+        {
+          "x": 85.91344034879113,
+          "y": 2523.0,
+          "label": "BAGGAGE",
+          "loads": [
+            "4TH PERSON",
+            "5TH PERSON",
+            "BAGGAGE"
+          ]
+        },
+        {
+          "x": 79.58378733997155,
+          "y": 2812.0,
+          "label": "FUEL TO FULL",
+          "loads": [
+            "4TH PERSON",
+            "6TH PERSON",
+            "FUEL TO FULL"
+          ]
+        },
+        {
+          "x": 85.91344034879113,
+          "y": 2523.0,
+          "label": "BAGGAGE",
+          "loads": [
+            "4TH PERSON",
+            "6TH PERSON",
+            "BAGGAGE"
+          ]
+        },
+        {
+          "x": 79.61245836350471,
+          "y": 2762.0,
+          "label": "BAGGAGE",
+          "loads": [
+            "4TH PERSON",
+            "FUEL TO FULL",
+            "BAGGAGE"
+          ]
+        },
+        {
+          "x": 81.941539829303,
+          "y": 2812.0,
+          "label": "FUEL TO FULL",
+          "loads": [
+            "5TH PERSON",
+            "6TH PERSON",
+            "FUEL TO FULL"
+          ]
+        },
+        {
+          "x": 88.5412643678161,
+          "y": 2523.0,
+          "label": "BAGGAGE",
+          "loads": [
+            "5TH PERSON",
+            "6TH PERSON",
+            "BAGGAGE"
+          ]
+        },
+        {
+          "x": 82.01289283128169,
+          "y": 2762.0,
+          "label": "BAGGAGE",
+          "loads": [
+            "5TH PERSON",
+            "FUEL TO FULL",
+            "BAGGAGE"
+          ]
+        },
+        {
+          "x": 82.01289283128169,
+          "y": 2762.0,
+          "label": "BAGGAGE",
+          "loads": [
+            "6TH PERSON",
+            "FUEL TO FULL",
+            "BAGGAGE"
+          ]
+        },
+        {
+          "x": 82.6757601166606,
+          "y": 2743.0,
+          "label": "5TH PERSON",
+          "loads": [
+            "COPILOT",
+            "3RD PERSON",
+            "4TH PERSON",
+            "5TH PERSON"
+          ]
+        },
+        {
+          "x": 82.6757601166606,
+          "y": 2743.0,
+          "label": "6TH PERSON",
+          "loads": [
+            "COPILOT",
+            "3RD PERSON",
+            "4TH PERSON",
+            "6TH PERSON"
+          ]
+        },
+        {
+          "x": 77.09913145539906,
+          "y": 2982.0,
+          "label": "FUEL TO FULL",
+          "loads": [
+            "COPILOT",
+            "3RD PERSON",
+            "4TH PERSON",
+            "FUEL TO FULL"
+          ]
+        },
+        {
+          "x": 82.76257333828444,
+          "y": 2693.0,
+          "label": "BAGGAGE",
+          "loads": [
+            "COPILOT",
+            "3RD PERSON",
+            "4TH PERSON",
+            "BAGGAGE"
+          ]
+        },
+        {
+          "x": 85.092821728035,
+          "y": 2743.0,
+          "label": "6TH PERSON",
+          "loads": [
+            "COPILOT",
+            "3RD PERSON",
+            "5TH PERSON",
+            "6TH PERSON"
+          ]
+        },
+        {
+          "x": 79.32247149564051,
+          "y": 2982.0,
+          "label": "FUEL TO FULL",
+          "loads": [
+            "COPILOT",
+            "3RD PERSON",
+            "5TH PERSON",
+            "FUEL TO FULL"
+          ]
+        },
+        {
+          "x": 85.22451169699221,
+          "y": 2693.0,
+          "label": "BAGGAGE",
+          "loads": [
+            "COPILOT",
+            "3RD PERSON",
+            "5TH PERSON",
+            "BAGGAGE"
+          ]
+        },
+        {
+          "x": 79.32247149564051,
+          "y": 2982.0,
+          "label": "FUEL TO FULL",
+          "loads": [
+            "COPILOT",
+            "3RD PERSON",
+            "6TH PERSON",
+            "FUEL TO FULL"
+          ]
+        },
+        {
+          "x": 85.22451169699221,
+          "y": 2693.0,
+          "label": "BAGGAGE",
+          "loads": [
+            "COPILOT",
+            "3RD PERSON",
+            "6TH PERSON",
+            "BAGGAGE"
+          ]
+        },
+        {
+          "x": 79.3450238744884,
+          "y": 2932.0,
+          "label": "BAGGAGE",
+          "loads": [
+            "COPILOT",
+            "3RD PERSON",
+            "FUEL TO FULL",
+            "BAGGAGE"
+          ]
+        },
+        {
+          "x": 85.092821728035,
+          "y": 2743.0,
+          "label": "6TH PERSON",
+          "loads": [
+            "COPILOT",
+            "4TH PERSON",
+            "5TH PERSON",
+            "6TH PERSON"
+          ]
+        },
+        {
+          "x": 79.32247149564051,
+          "y": 2982.0,
+          "label": "FUEL TO FULL",
+          "loads": [
+            "COPILOT",
+            "4TH PERSON",
+            "5TH PERSON",
+            "FUEL TO FULL"
+          ]
+        },
+        {
+          "x": 85.22451169699221,
+          "y": 2693.0,
+          "label": "BAGGAGE",
+          "loads": [
+            "COPILOT",
+            "4TH PERSON",
+            "5TH PERSON",
+            "BAGGAGE"
+          ]
+        },
+        {
+          "x": 79.32247149564051,
+          "y": 2982.0,
+          "label": "FUEL TO FULL",
+          "loads": [
+            "COPILOT",
+            "4TH PERSON",
+            "6TH PERSON",
+            "FUEL TO FULL"
+          ]
+        },
+        {
+          "x": 85.22451169699221,
+          "y": 2693.0,
+          "label": "BAGGAGE",
+          "loads": [
+            "COPILOT",
+            "4TH PERSON",
+            "6TH PERSON",
+            "BAGGAGE"
+          ]
+        },
+        {
+          "x": 79.3450238744884,
+          "y": 2932.0,
+          "label": "BAGGAGE",
+          "loads": [
+            "COPILOT",
+            "4TH PERSON",
+            "FUEL TO FULL",
+            "BAGGAGE"
+          ]
+        },
+        {
+          "x": 81.54581153588197,
+          "y": 2982.0,
+          "label": "FUEL TO FULL",
+          "loads": [
+            "COPILOT",
+            "5TH PERSON",
+            "6TH PERSON",
+            "FUEL TO FULL"
+          ]
+        },
+        {
+          "x": 87.68645005569996,
+          "y": 2693.0,
+          "label": "BAGGAGE",
+          "loads": [
+            "COPILOT",
+            "5TH PERSON",
+            "6TH PERSON",
+            "BAGGAGE"
+          ]
+        },
+        {
+          "x": 81.6062789904502,
+          "y": 2932.0,
+          "label": "BAGGAGE",
+          "loads": [
+            "COPILOT",
+            "5TH PERSON",
+            "FUEL TO FULL",
+            "BAGGAGE"
+          ]
+        },
+        {
+          "x": 81.6062789904502,
+          "y": 2932.0,
+          "label": "BAGGAGE",
+          "loads": [
+            "COPILOT",
+            "6TH PERSON",
+            "FUEL TO FULL",
+            "BAGGAGE"
+          ]
+        },
+        {
+          "x": 87.32395552314985,
+          "y": 2743.0,
+          "label": "6TH PERSON",
+          "loads": [
+            "3RD PERSON",
+            "4TH PERSON",
+            "5TH PERSON",
+            "6TH PERSON"
+          ]
+        },
+        {
+          "x": 81.37478537894032,
+          "y": 2982.0,
+          "label": "FUEL TO FULL",
+          "loads": [
+            "3RD PERSON",
+            "4TH PERSON",
+            "5TH PERSON",
+            "FUEL TO FULL"
+          ]
+        },
+        {
+          "x": 87.49707018195322,
+          "y": 2693.0,
+          "label": "BAGGAGE",
+          "loads": [
+            "3RD PERSON",
+            "4TH PERSON",
+            "5TH PERSON",
+            "BAGGAGE"
+          ]
+        },
+        {
+          "x": 81.37478537894032,
+          "y": 2982.0,
+          "label": "FUEL TO FULL",
+          "loads": [
+            "3RD PERSON",
+            "4TH PERSON",
+            "6TH PERSON",
+            "FUEL TO FULL"
+          ]
+        },
+        {
+          "x": 87.49707018195322,
+          "y": 2693.0,
+          "label": "BAGGAGE",
+          "loads": [
+            "3RD PERSON",
+            "4TH PERSON",
+            "6TH PERSON",
+            "BAGGAGE"
+          ]
+        },
+        {
+          "x": 81.43233628922238,
+          "y": 2932.0,
+          "label": "BAGGAGE",
+          "loads": [
+            "3RD PERSON",
+            "4TH PERSON",
+            "FUEL TO FULL",
+            "BAGGAGE"
+          ]
+        },
+        {
+          "x": 83.59812541918176,
+          "y": 2982.0,
+          "label": "FUEL TO FULL",
+          "loads": [
+            "3RD PERSON",
+            "5TH PERSON",
+            "6TH PERSON",
+            "FUEL TO FULL"
+          ]
+        },
+        {
+          "x": 89.95900854066097,
+          "y": 2693.0,
+          "label": "BAGGAGE",
+          "loads": [
+            "3RD PERSON",
+            "5TH PERSON",
+            "6TH PERSON",
+            "BAGGAGE"
+          ]
+        },
+        {
+          "x": 83.69359140518418,
+          "y": 2932.0,
+          "label": "BAGGAGE",
+          "loads": [
+            "3RD PERSON",
+            "5TH PERSON",
+            "FUEL TO FULL",
+            "BAGGAGE"
+          ]
+        },
+        {
+          "x": 83.69359140518418,
+          "y": 2932.0,
+          "label": "BAGGAGE",
+          "loads": [
+            "3RD PERSON",
+            "6TH PERSON",
+            "FUEL TO FULL",
+            "BAGGAGE"
+          ]
+        },
+        {
+          "x": 83.59812541918176,
+          "y": 2982.0,
+          "label": "FUEL TO FULL",
+          "loads": [
+            "4TH PERSON",
+            "5TH PERSON",
+            "6TH PERSON",
+            "FUEL TO FULL"
+          ]
+        },
+        {
+          "x": 89.95900854066097,
+          "y": 2693.0,
+          "label": "BAGGAGE",
+          "loads": [
+            "4TH PERSON",
+            "5TH PERSON",
+            "6TH PERSON",
+            "BAGGAGE"
+          ]
+        },
+        {
+          "x": 83.69359140518418,
+          "y": 2932.0,
+          "label": "BAGGAGE",
+          "loads": [
+            "4TH PERSON",
+            "5TH PERSON",
+            "FUEL TO FULL",
+            "BAGGAGE"
+          ]
+        },
+        {
+          "x": 83.69359140518418,
+          "y": 2932.0,
+          "label": "BAGGAGE",
+          "loads": [
+            "4TH PERSON",
+            "6TH PERSON",
+            "FUEL TO FULL",
+            "BAGGAGE"
+          ]
+        },
+        {
+          "x": 85.95484652114598,
+          "y": 2932.0,
+          "label": "BAGGAGE",
+          "loads": [
+            "5TH PERSON",
+            "6TH PERSON",
+            "FUEL TO FULL",
+            "BAGGAGE"
+          ]
+        },
+        {
+          "x": 86.60474081702712,
+          "y": 2913.0,
+          "label": "6TH PERSON",
+          "loads": [
+            "COPILOT",
+            "3RD PERSON",
+            "4TH PERSON",
+            "5TH PERSON",
+            "6TH PERSON"
+          ]
+        },
+        {
+          "x": 81.03096763959391,
+          "y": 3152.0,
+          "label": "FUEL TO FULL",
+          "loads": [
+            "COPILOT",
+            "3RD PERSON",
+            "4TH PERSON",
+            "5TH PERSON",
+            "FUEL TO FULL"
+          ]
+        },
+        {
+          "x": 86.75501571777856,
+          "y": 2863.0,
+          "label": "BAGGAGE",
+          "loads": [
+            "COPILOT",
+            "3RD PERSON",
+            "4TH PERSON",
+            "5TH PERSON",
+            "BAGGAGE"
+          ]
+        },
+        {
+          "x": 81.03096763959391,
+          "y": 3152.0,
+          "label": "FUEL TO FULL",
+          "loads": [
+            "COPILOT",
+            "3RD PERSON",
+            "4TH PERSON",
+            "6TH PERSON",
+            "FUEL TO FULL"
+          ]
+        },
+        {
+          "x": 86.75501571777856,
+          "y": 2863.0,
+          "label": "BAGGAGE",
+          "loads": [
+            "COPILOT",
+            "3RD PERSON",
+            "4TH PERSON",
+            "6TH PERSON",
+            "BAGGAGE"
+          ]
+        },
+        {
+          "x": 81.07982269503546,
+          "y": 3102.0,
+          "label": "BAGGAGE",
+          "loads": [
+            "COPILOT",
+            "3RD PERSON",
+            "4TH PERSON",
+            "FUEL TO FULL",
+            "BAGGAGE"
+          ]
+        },
+        {
+          "x": 83.134394035533,
+          "y": 3152.0,
+          "label": "FUEL TO FULL",
+          "loads": [
+            "COPILOT",
+            "3RD PERSON",
+            "5TH PERSON",
+            "6TH PERSON",
+            "FUEL TO FULL"
+          ]
+        },
+        {
+          "x": 89.07076842472931,
+          "y": 2863.0,
+          "label": "BAGGAGE",
+          "loads": [
+            "COPILOT",
+            "3RD PERSON",
+            "5TH PERSON",
+            "6TH PERSON",
+            "BAGGAGE"
+          ]
+        },
+        {
+          "x": 83.2171534493875,
+          "y": 3102.0,
+          "label": "BAGGAGE",
+          "loads": [
+            "COPILOT",
+            "3RD PERSON",
+            "5TH PERSON",
+            "FUEL TO FULL",
+            "BAGGAGE"
+          ]
+        },
+        {
+          "x": 83.2171534493875,
+          "y": 3102.0,
+          "label": "BAGGAGE",
+          "loads": [
+            "COPILOT",
+            "3RD PERSON",
+            "6TH PERSON",
+            "FUEL TO FULL",
+            "BAGGAGE"
+          ]
+        },
+        {
+          "x": 83.134394035533,
+          "y": 3152.0,
+          "label": "FUEL TO FULL",
+          "loads": [
+            "COPILOT",
+            "4TH PERSON",
+            "5TH PERSON",
+            "6TH PERSON",
+            "FUEL TO FULL"
+          ]
+        },
+        {
+          "x": 89.07076842472931,
+          "y": 2863.0,
+          "label": "BAGGAGE",
+          "loads": [
+            "COPILOT",
+            "4TH PERSON",
+            "5TH PERSON",
+            "6TH PERSON",
+            "BAGGAGE"
+          ]
+        },
+        {
+          "x": 83.2171534493875,
+          "y": 3102.0,
+          "label": "BAGGAGE",
+          "loads": [
+            "COPILOT",
+            "4TH PERSON",
+            "5TH PERSON",
+            "FUEL TO FULL",
+            "BAGGAGE"
+          ]
+        },
+        {
+          "x": 83.2171534493875,
+          "y": 3102.0,
+          "label": "BAGGAGE",
+          "loads": [
+            "COPILOT",
+            "4TH PERSON",
+            "6TH PERSON",
+            "FUEL TO FULL",
+            "BAGGAGE"
+          ]
+        },
+        {
+          "x": 85.35448420373952,
+          "y": 3102.0,
+          "label": "BAGGAGE",
+          "loads": [
+            "COPILOT",
+            "5TH PERSON",
+            "6TH PERSON",
+            "FUEL TO FULL",
+            "BAGGAGE"
+          ]
+        },
+        {
+          "x": 85.07601840101522,
+          "y": 3152.0,
+          "label": "FUEL TO FULL",
+          "loads": [
+            "3RD PERSON",
+            "4TH PERSON",
+            "5TH PERSON",
+            "6TH PERSON",
+            "FUEL TO FULL"
+          ]
+        },
+        {
+          "x": 91.20838630806847,
+          "y": 2863.0,
+          "label": "BAGGAGE",
+          "loads": [
+            "3RD PERSON",
+            "4TH PERSON",
+            "5TH PERSON",
+            "6TH PERSON",
+            "BAGGAGE"
+          ]
+        },
+        {
+          "x": 85.19007414571244,
+          "y": 3102.0,
+          "label": "BAGGAGE",
+          "loads": [
+            "3RD PERSON",
+            "4TH PERSON",
+            "5TH PERSON",
+            "FUEL TO FULL",
+            "BAGGAGE"
+          ]
+        },
+        {
+          "x": 85.19007414571244,
+          "y": 3102.0,
+          "label": "BAGGAGE",
+          "loads": [
+            "3RD PERSON",
+            "4TH PERSON",
+            "6TH PERSON",
+            "FUEL TO FULL",
+            "BAGGAGE"
+          ]
+        },
+        {
+          "x": 87.32740490006447,
+          "y": 3102.0,
+          "label": "BAGGAGE",
+          "loads": [
+            "3RD PERSON",
+            "5TH PERSON",
+            "6TH PERSON",
+            "FUEL TO FULL",
+            "BAGGAGE"
+          ]
+        },
+        {
+          "x": 87.32740490006447,
+          "y": 3102.0,
+          "label": "BAGGAGE",
+          "loads": [
+            "4TH PERSON",
+            "5TH PERSON",
+            "6TH PERSON",
+            "FUEL TO FULL",
+            "BAGGAGE"
+          ]
+        },
+        {
+          "x": 84.56038832028898,
+          "y": 3322.0,
+          "label": "FUEL TO FULL",
+          "loads": [
+            "COPILOT",
+            "3RD PERSON",
+            "4TH PERSON",
+            "5TH PERSON",
+            "6TH PERSON",
+            "FUEL TO FULL"
+          ]
+        },
+        {
+          "x": 90.29990438509726,
+          "y": 3033.0,
+          "label": "BAGGAGE",
+          "loads": [
+            "COPILOT",
+            "3RD PERSON",
+            "4TH PERSON",
+            "5TH PERSON",
+            "6TH PERSON",
+            "BAGGAGE"
+          ]
+        },
+        {
+          "x": 84.66063875305623,
+          "y": 3272.0,
+          "label": "BAGGAGE",
+          "loads": [
+            "COPILOT",
+            "3RD PERSON",
+            "4TH PERSON",
+            "5TH PERSON",
+            "FUEL TO FULL",
+            "BAGGAGE"
+          ]
+        },
+        {
+          "x": 84.66063875305623,
+          "y": 3272.0,
+          "label": "BAGGAGE",
+          "loads": [
+            "COPILOT",
+            "3RD PERSON",
+            "4TH PERSON",
+            "6TH PERSON",
+            "FUEL TO FULL",
+            "BAGGAGE"
+          ]
+        },
+        {
+          "x": 86.68692237163813,
+          "y": 3272.0,
+          "label": "BAGGAGE",
+          "loads": [
+            "COPILOT",
+            "3RD PERSON",
+            "5TH PERSON",
+            "6TH PERSON",
+            "FUEL TO FULL",
+            "BAGGAGE"
+          ]
+        },
+        {
+          "x": 86.68692237163813,
+          "y": 3272.0,
+          "label": "BAGGAGE",
+          "loads": [
+            "COPILOT",
+            "4TH PERSON",
+            "5TH PERSON",
+            "6TH PERSON",
+            "FUEL TO FULL",
+            "BAGGAGE"
+          ]
+        },
+        {
+          "x": 88.5573380195599,
+          "y": 3272.0,
+          "label": "BAGGAGE",
+          "loads": [
+            "3RD PERSON",
+            "4TH PERSON",
+            "5TH PERSON",
+            "6TH PERSON",
+            "FUEL TO FULL",
+            "BAGGAGE"
+          ]
+        },
+        {
+          "x": 87.88774259151656,
+          "y": 3442.0,
+          "label": "BAGGAGE",
+          "loads": [
+            "COPILOT",
+            "3RD PERSON",
+            "4TH PERSON",
+            "5TH PERSON",
+            "6TH PERSON",
+            "FUEL TO FULL",
+            "BAGGAGE"
+          ]
+        }
+      ],
+      "forward_edge": [
+        {
+          "x": 73.09239457101309,
+          "y": 2063.0,
+          "label": "MINIMUM WEIGHT",
+          "point_id": 1,
+          "loads": []
+        },
+        {
+          "x": 72.58074838187703,
+          "y": 2472.0,
+          "label": "FUEL TO FULL",
+          "point_id": 2,
+          "loads": [
+            "FUEL TO FULL"
+          ]
+        },
+        {
+          "x": 72.7364155942468,
+          "y": 2642.0,
+          "label": "COPILOT",
+          "point_id": 3,
+          "loads": [
+            "FUEL TO FULL",
+            "COPILOT"
+          ]
+        },
+        {
+          "x": 75.0496479374111,
+          "y": 2812.0,
+          "label": "4TH PERSON",
+          "point_id": 4,
+          "loads": [
+            "FUEL TO FULL",
+            "COPILOT",
+            "4TH PERSON"
+          ]
+        },
+        {
+          "x": 77.09913145539906,
+          "y": 2982.0,
+          "label": "3RD PERSON",
+          "point_id": 5,
+          "loads": [
+            "FUEL TO FULL",
+            "COPILOT",
+            "4TH PERSON",
+            "3RD PERSON"
+          ]
+        },
+        {
+          "x": 81.03096763959391,
+          "y": 3152.0,
+          "label": "6TH PERSON",
+          "point_id": 6,
+          "loads": [
+            "FUEL TO FULL",
+            "COPILOT",
+            "4TH PERSON",
+            "3RD PERSON",
+            "6TH PERSON"
+          ]
+        },
+        {
+          "x": 84.56038832028898,
+          "y": 3322.0,
+          "label": "5TH PERSON",
+          "point_id": 7,
+          "loads": [
+            "FUEL TO FULL",
+            "COPILOT",
+            "4TH PERSON",
+            "3RD PERSON",
+            "6TH PERSON",
+            "5TH PERSON"
+          ]
+        },
+        {
+          "x": 87.88774259151656,
+          "y": 3442.0,
+          "label": "BAGGAGE",
+          "point_id": 8,
+          "loads": [
+            "FUEL TO FULL",
+            "COPILOT",
+            "4TH PERSON",
+            "3RD PERSON",
+            "6TH PERSON",
+            "5TH PERSON",
+            "BAGGAGE"
+          ]
+        }
+      ],
+      "aft_edge": [
+        {
+          "x": 73.09239457101309,
+          "y": 2063.0,
+          "label": "MINIMUM WEIGHT",
+          "point_id": 1,
+          "loads": []
+        },
+        {
+          "x": 78.96912963811269,
+          "y": 2183.0,
+          "label": "BAGGAGE",
+          "point_id": 9,
+          "loads": [
+            "BAGGAGE"
+          ]
+        },
+        {
+          "x": 84.10098172545688,
+          "y": 2353.0,
+          "label": "5TH PERSON",
+          "point_id": 10,
+          "loads": [
+            "BAGGAGE",
+            "5TH PERSON"
+          ]
+        },
+        {
+          "x": 88.5412643678161,
+          "y": 2523.0,
+          "label": "6TH PERSON",
+          "point_id": 11,
+          "loads": [
+            "BAGGAGE",
+            "5TH PERSON",
+            "6TH PERSON"
+          ]
+        },
+        {
+          "x": 89.95900854066097,
+          "y": 2693.0,
+          "label": "3RD PERSON",
+          "point_id": 12,
+          "loads": [
+            "BAGGAGE",
+            "5TH PERSON",
+            "6TH PERSON",
+            "3RD PERSON"
+          ]
+        },
+        {
+          "x": 91.20838630806847,
+          "y": 2863.0,
+          "label": "4TH PERSON",
+          "point_id": 13,
+          "loads": [
+            "BAGGAGE",
+            "5TH PERSON",
+            "6TH PERSON",
+            "3RD PERSON",
+            "4TH PERSON"
+          ]
+        },
+        {
+          "x": 90.29990438509726,
+          "y": 3033.0,
+          "label": "COPILOT",
+          "point_id": 14,
+          "loads": [
+            "BAGGAGE",
+            "5TH PERSON",
+            "6TH PERSON",
+            "3RD PERSON",
+            "4TH PERSON",
+            "COPILOT"
+          ]
+        },
+        {
+          "x": 87.88774259151656,
+          "y": 3442.0,
+          "label": "FUEL TO FULL",
+          "point_id": 8,
+          "loads": [
+            "BAGGAGE",
+            "5TH PERSON",
+            "6TH PERSON",
+            "3RD PERSON",
+            "4TH PERSON",
+            "COPILOT",
+            "FUEL TO FULL"
+          ]
+        }
+      ],
+      "envelope_polygon": [
+        {
+          "x": 73.09239457101309,
+          "y": 2063.0,
+          "label": "MINIMUM WEIGHT",
+          "point_id": 1,
+          "loads": []
+        },
+        {
+          "x": 72.58074838187703,
+          "y": 2472.0,
+          "label": "FUEL TO FULL",
+          "point_id": 2,
+          "loads": [
+            "FUEL TO FULL"
+          ]
+        },
+        {
+          "x": 72.7364155942468,
+          "y": 2642.0,
+          "label": "COPILOT",
+          "point_id": 3,
+          "loads": [
+            "FUEL TO FULL",
+            "COPILOT"
+          ]
+        },
+        {
+          "x": 75.0496479374111,
+          "y": 2812.0,
+          "label": "4TH PERSON",
+          "point_id": 4,
+          "loads": [
+            "FUEL TO FULL",
+            "COPILOT",
+            "4TH PERSON"
+          ]
+        },
+        {
+          "x": 77.09913145539906,
+          "y": 2982.0,
+          "label": "3RD PERSON",
+          "point_id": 5,
+          "loads": [
+            "FUEL TO FULL",
+            "COPILOT",
+            "4TH PERSON",
+            "3RD PERSON"
+          ]
+        },
+        {
+          "x": 81.03096763959391,
+          "y": 3152.0,
+          "label": "6TH PERSON",
+          "point_id": 6,
+          "loads": [
+            "FUEL TO FULL",
+            "COPILOT",
+            "4TH PERSON",
+            "3RD PERSON",
+            "6TH PERSON"
+          ]
+        },
+        {
+          "x": 84.56038832028898,
+          "y": 3322.0,
+          "label": "5TH PERSON",
+          "point_id": 7,
+          "loads": [
+            "FUEL TO FULL",
+            "COPILOT",
+            "4TH PERSON",
+            "3RD PERSON",
+            "6TH PERSON",
+            "5TH PERSON"
+          ]
+        },
+        {
+          "x": 87.88774259151656,
+          "y": 3442.0,
+          "label": "BAGGAGE",
+          "point_id": 8,
+          "loads": [
+            "FUEL TO FULL",
+            "COPILOT",
+            "4TH PERSON",
+            "3RD PERSON",
+            "6TH PERSON",
+            "5TH PERSON",
+            "BAGGAGE"
+          ]
+        },
+        {
+          "x": 90.29990438509726,
+          "y": 3033.0,
+          "label": "COPILOT",
+          "point_id": 14,
+          "loads": [
+            "BAGGAGE",
+            "5TH PERSON",
+            "6TH PERSON",
+            "3RD PERSON",
+            "4TH PERSON",
+            "COPILOT"
+          ]
+        },
+        {
+          "x": 91.20838630806847,
+          "y": 2863.0,
+          "label": "4TH PERSON",
+          "point_id": 13,
+          "loads": [
+            "BAGGAGE",
+            "5TH PERSON",
+            "6TH PERSON",
+            "3RD PERSON",
+            "4TH PERSON"
+          ]
+        },
+        {
+          "x": 89.95900854066097,
+          "y": 2693.0,
+          "label": "3RD PERSON",
+          "point_id": 12,
+          "loads": [
+            "BAGGAGE",
+            "5TH PERSON",
+            "6TH PERSON",
+            "3RD PERSON"
+          ]
+        },
+        {
+          "x": 88.5412643678161,
+          "y": 2523.0,
+          "label": "6TH PERSON",
+          "point_id": 11,
+          "loads": [
+            "BAGGAGE",
+            "5TH PERSON",
+            "6TH PERSON"
+          ]
+        },
+        {
+          "x": 84.10098172545688,
+          "y": 2353.0,
+          "label": "5TH PERSON",
+          "point_id": 10,
+          "loads": [
+            "BAGGAGE",
+            "5TH PERSON"
+          ]
+        },
+        {
+          "x": 78.96912963811269,
+          "y": 2183.0,
+          "label": "BAGGAGE",
+          "point_id": 9,
+          "loads": [
+            "BAGGAGE"
+          ]
+        },
+        {
+          "x": 73.09239457101309,
+          "y": 2063.0,
+          "label": "MINIMUM WEIGHT",
+          "point_id": 1,
+          "loads": []
+        }
+      ],
+      "structural_limits": {
+        "input": {
+          "MAC": 69.24642180579231,
+          "XMACLE": 63.64102768297226,
+          "geometry_source": "outputs/cases/ch5_geometry_output.json",
+          "FWDGRL": 20.0,
+          "AFTGRL": 31.0,
+          "FWDREDL": 13.0,
+          "GROSS_WEIGHT": 3400.0,
+          "REDUCED_WEIGHT": 2800.0
+        },
+        "points": {
+          "FWDGROSS": {
+            "label": "Fwd Gross",
+            "XBAR": 77.49031204413072,
+            "WEIGHT": 3400.0,
+            "S1": 3400.0
+          },
+          "AFTGROSS": {
+            "label": "Aft Gross",
+            "XBAR": 85.10741844276788,
+            "WEIGHT": 3400.0,
+            "S1": 3400.0
+          },
+          "FWDRED": {
+            "label": "Fwd Reduced",
+            "XBAR": 72.64306251772526,
+            "WEIGHT": 2800.0,
+            "S1": 2800.0
+          }
+        },
+        "plot_lines": [
+          {
+            "name": "forward_reduced_to_gross",
+            "points": [
+              {
+                "x": 72.64306251772526,
+                "y": 2800.0
+              },
+              {
+                "x": 77.49031204413072,
+                "y": 3400.0
+              }
+            ]
+          },
+          {
+            "name": "gross_weight_limit",
+            "points": [
+              {
+                "x": 77.49031204413072,
+                "y": 3400.0
+              },
+              {
+                "x": 85.10741844276788,
+                "y": 3400.0
+              }
+            ]
+          }
+        ],
+        "plot_polygon": [
+          {
+            "x": 72.64306251772526,
+            "y": 2800.0,
+            "label": "Fwd Reduced"
+          },
+          {
+            "x": 77.49031204413072,
+            "y": 3400.0,
+            "label": "Fwd Gross"
+          },
+          {
+            "x": 85.10741844276788,
+            "y": 3400.0,
+            "label": "Aft Gross"
+          }
+        ]
+      }
+    },
+    "structural_limits": {
+      "input": {
+        "MAC": 69.24642180579231,
+        "XMACLE": 63.64102768297226,
+        "geometry_source": "outputs/cases/ch5_geometry_output.json",
+        "FWDGRL": 20.0,
+        "AFTGRL": 31.0,
+        "FWDREDL": 13.0,
+        "GROSS_WEIGHT": 3400.0,
+        "REDUCED_WEIGHT": 2800.0
+      },
+      "points": {
+        "FWDGROSS": {
+          "label": "Fwd Gross",
+          "XBAR": 77.49031204413072,
+          "WEIGHT": 3400.0,
+          "S1": 3400.0
+        },
+        "AFTGROSS": {
+          "label": "Aft Gross",
+          "XBAR": 85.10741844276788,
+          "WEIGHT": 3400.0,
+          "S1": 3400.0
+        },
+        "FWDRED": {
+          "label": "Fwd Reduced",
+          "XBAR": 72.64306251772526,
+          "WEIGHT": 2800.0,
+          "S1": 2800.0
+        }
+      },
+      "plot_lines": [
+        {
+          "name": "forward_reduced_to_gross",
+          "points": [
+            {
+              "x": 72.64306251772526,
+              "y": 2800.0
+            },
+            {
+              "x": 77.49031204413072,
+              "y": 3400.0
+            }
+          ]
+        },
+        {
+          "name": "gross_weight_limit",
+          "points": [
+            {
+              "x": 77.49031204413072,
+              "y": 3400.0
+            },
+            {
+              "x": 85.10741844276788,
+              "y": 3400.0
+            }
+          ]
+        }
+      ],
+      "plot_polygon": [
+        {
+          "x": 72.64306251772526,
+          "y": 2800.0,
+          "label": "Fwd Reduced"
+        },
+        {
+          "x": 77.49031204413072,
+          "y": 3400.0,
+          "label": "Fwd Gross"
+        },
+        {
+          "x": 85.10741844276788,
+          "y": 3400.0,
+          "label": "Aft Gross"
+        }
+      ]
+    }
+  }
+}
