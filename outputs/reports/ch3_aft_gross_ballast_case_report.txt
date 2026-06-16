@@ -1,0 +1,36 @@
+Ballast Case Generation
+
+CASE: aft_gross
+SOURCE INPUT: inputs/weight_db.json
+SOURCE CONFIG: inputs/ballast_case_config.json
+SOURCE ENVELOPE: outputs/cases/ch3_weight_envelope_output.json
+SOURCE CASE: aft_gross
+
+TARGET
+NAME                 AFTGROSS
+WEIGHT               3400.000
+XBAR                 85.107
+GEOMETRY SOURCE      outputs/cases/ch5_geometry_output.json
+
+SELECTED LOAD POINT
+POINT ID             7
+ADDED                5TH PERSON
+WEIGHT               3322.000
+XBAR                 84.560
+ZBAR                 92.639
+LOADS                FUEL TO FULL, COPILOT, 4TH PERSON, 3RD PERSON, 6TH PERSON, 5TH PERSON
+
+BALLAST
+NAME                 BALLAST
+WEIGHT               78.000
+X                    108.405
+Y                    0.000
+Z                    90.000
+
+FINAL POINT
+WEIGHT               3400.000
+XBAR                 85.107
+ZBAR                 92.579
+
+OUTPUT
+CH4 INPUT DB         inputs/weight_db_for_ch4.json

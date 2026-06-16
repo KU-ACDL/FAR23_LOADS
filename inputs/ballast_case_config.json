@@ -1,0 +1,16 @@
+{
+  "cases": {
+    "aft_gross": {
+      "target": "AFTGROSS",
+      "envelope_output_path": "outputs/cases/ch3_weight_envelope_output.json",
+      "selected_point_id": 7,
+      "output_name_overrides": {
+        "FUEL TO FULL": "FUEL TO GR WT"
+      },
+      "ballast_name": "BALLAST",
+      "ballast_z": 90.0,
+      "output_input_path": "inputs/weight_db_for_ch4.json",
+      "output_report_path": "outputs/reports/ch3_aft_gross_ballast_case_report.txt"
+    }
+  }
+}
