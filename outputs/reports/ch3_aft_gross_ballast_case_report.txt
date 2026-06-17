@@ -4,7 +4,7 @@ CASE: aft_gross
 SOURCE INPUT: inputs/weight_db.json
 SOURCE CONFIG: inputs/ballast_case_config.json
 SOURCE ENVELOPE: outputs/cases/ch3_weight_envelope_output.json
-SOURCE CASE: aft_gross
+SOURCE DB: weight_db
 
 TARGET
 NAME                 AFTGROSS

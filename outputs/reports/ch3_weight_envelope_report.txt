@@ -1,6 +1,6 @@
 Weight CG Envelope
 
-CASE: aft_gross
+SOURCE DB: weight_db
 
 FORWARD EDGE
 NO  ADDED                       XBAR       ZBAR     WEIGHT

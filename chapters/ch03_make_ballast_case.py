@@ -120,7 +120,7 @@ def build_report(summary: dict[str, Any]) -> str:
         f"SOURCE INPUT: {summary['source_input']}",
         f"SOURCE CONFIG: {summary['source_config']}",
         f"SOURCE ENVELOPE: {summary['source_envelope_output']}",
-        f"SOURCE CASE: {summary['source_case']}",
+        f"SOURCE DB: {summary['source_db']}",
         "",
         "TARGET",
         f"NAME                 {target['name']}",
@@ -159,7 +159,7 @@ def make_ballast_case(
     config_path: str | Path = CONFIG_PATH,
     case_name: str = DEFAULT_CASE_NAME,
 ) -> dict[str, Any]:
-    selected_case_name, items, ch3_config = load_case(input_path, case_name=None)
+    selected_database_name, items, ch3_config = load_case(input_path, case_name=None)
     config = read_json(config_path)
     ballast_config = get_ballast_case_config(config, case_name)
     envelope_output_path = ballast_config.get("envelope_output_path", ENVELOPE_OUTPUT_PATH)
@@ -238,7 +238,7 @@ def make_ballast_case(
         "source_input": project_relative(input_path),
         "source_config": project_relative(config_path),
         "source_envelope_output": project_relative(envelope_output_path),
-        "source_case": selected_case_name,
+        "source_db": selected_database_name,
         "case": case_name,
         "target": {
             "name": target_name,

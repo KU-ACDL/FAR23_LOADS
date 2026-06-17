@@ -116,17 +116,21 @@ def load_case(
     case_name: str | None = None,
 ) -> tuple[str, list[WeightItem], dict[str, Any]]:
     data = read_json(path)
-    cases = data.get("cases")
-    if not isinstance(cases, dict) or not cases:
-        raise ValueError("Input DB must contain a non-empty 'cases' object.")
+    components = data.get("components")
+    selected_case_name = str(data.get("name", "weight_db"))
 
-    selected_case_name = case_name or next(iter(cases))
-    if selected_case_name not in cases:
-        raise ValueError(f"Case '{selected_case_name}' not found in input DB.")
+    if components is None:
+        cases = data.get("cases")
+        if not isinstance(cases, dict) or not cases:
+            raise ValueError("Input DB must contain a non-empty 'components' list.")
 
-    selected_case = cases[selected_case_name]
-    if not isinstance(selected_case, list) or not selected_case:
-        raise ValueError(f"Case '{selected_case_name}' must contain a non-empty component list.")
+        selected_case_name = case_name or next(iter(cases))
+        if selected_case_name not in cases:
+            raise ValueError(f"Case '{selected_case_name}' not found in input DB.")
+        components = cases[selected_case_name]
+
+    if not isinstance(components, list) or not components:
+        raise ValueError("Input DB must contain a non-empty component list.")
 
     ch3_config = data.get("ch3", {})
     if ch3_config and not isinstance(ch3_config, dict):
@@ -134,7 +138,7 @@ def load_case(
 
     return (
         selected_case_name,
-        [make_weight_item(item, index) for index, item in enumerate(selected_case, start=1)],
+        [make_weight_item(item, index) for index, item in enumerate(components, start=1)],
         ch3_config,
     )
 
@@ -484,11 +488,11 @@ def compute_weight_envelope(
     }
 
 
-def build_report(case_name: str, result: dict[str, Any]) -> str:
+def build_report(database_name: str, result: dict[str, Any]) -> str:
     lines = [
         "Weight CG Envelope",
         "",
-        f"CASE: {case_name}",
+        f"SOURCE DB: {database_name}",
         "",
         "FORWARD EDGE",
         "NO  ADDED                       XBAR       ZBAR     WEIGHT",
@@ -546,7 +550,7 @@ def run_chapter3(
     report_path: str | Path = REPORT_PATH,
     case_name: str | None = None,
 ) -> dict[str, Any]:
-    selected_case_name, items, ch3_config = load_case(input_path, case_name=case_name)
+    selected_database_name, items, ch3_config = load_case(input_path, case_name=case_name)
     program_data = DEFAULT_PROGRAM_DATA | ch3_config.get("program_data", {})
     plot_input = {
         "title": ch3_config.get("title", "USEFUL LOAD ENVELOPE AND STRUCTURAL LIMITS"),
@@ -569,7 +573,7 @@ def run_chapter3(
         "program": "WTENV.BAS",
         "input": {
             "path": project_relative(input_path),
-            "case": selected_case_name,
+            "database": selected_database_name,
             "program_data": program_data,
             "plot_input": plot_input,
             "exclude_names": sorted(exclude_names),
@@ -583,7 +587,7 @@ def run_chapter3(
     }
 
     write_json(output, output_path)
-    write_text(build_report(selected_case_name, output), report_path)
+    write_text(build_report(selected_database_name, output), report_path)
     return output
 
 
