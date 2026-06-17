@@ -1,0 +1,49 @@
+CENTER OF GRAVITY, WEIGHT, & INERTIA
+
+AFT GROSS WEIGHT CG
+
+
+CENTER OF GRAVITY AND WEIGHT
+XBAR (FUS STA)  ZBAR (WATERLINE)  WEIGHT (POUNDS)
+  85.10742          92.57894             3400
+
+
+INERTIAS WITH RESPECT TO AIRPLANE COORDINATES
+IXX              IYY              IZZ              IXZ        UNITS
+  1201.381         2061.290         3025.723         134.1821    SLUG FEET SQUARED
+   5566066          9550070         14018344           621673    LBS INCHES SQUARED
+
+INERTIAS WITH RESPECT TO PRINCIPAL AXES
+IX(P)            IY(P)            IZ(P)            UNITS
+  1191.565         2061.290         3035.539    SLUG FEET SQUARED
+   5520586          9550070         14063824    LBS INCHES SQUARED
+
+THETA =   4.184150  (DEGREES, MEASURED UP FROM WL & AFT FROM CG)
+
+
+COMPONENT DATA
+COMPONENT                    WEIGHT       XBAR       YBAR       ZBAR        IXX        IYY        IZZ        IXZ
+WING, OUTBOARD             330.000     97.870      0.000     87.730    4451869     194996    4497862     -20422
+HORIZ TAIL                  42.000    270.360      0.000    111.000      14252    1455630    1441378     143327
+VERT TAIL                   23.000    276.930      0.000    137.760      46951     893256     846306     199335
+MAIN GEAR WHE               45.000     97.000      0.000     69.000      25018      31383       6365     -12619
+MAIN GEAR STRU             110.000     97.000      0.000     78.000      23380      38938      15558     -19072
+NOSE GEAR WHE                9.000      1.000      0.000     52.000      14820      78486      63667      30717
+NOSE GEAR STRU              40.000      1.000      0.000     65.000      30424     313386     282962      92784
+FLIGHT CONTROL              57.000    123.000      0.000    105.000       8794      90637      81843      26828
+NACELLE                     62.000     21.000      0.000     92.000         21     254826     254805       2301
+ENGINE INSTALL             505.000     22.000      0.000     92.000      52773    2092828    2092659      18450
+PROPELLER                   74.000    -10.000      0.000    100.000       4075     673437     669361     -52229
+SYSTEMS                     88.000     60.000      0.000    100.000       4846      60320      55474     -16396
+FURNISHINGS                175.000    105.000      0.000    100.000       9638      78888      69250      25834
+UNUSABLE FUEL               12.000     73.000      0.000     80.000       1899       3658       1759       1828
+FSELAGE STRUC              250.000     99.000      0.000     80.000      39557    1218828    1179271     -43688
+PILOT                      170.000     75.000      0.000    100.000      38092      51209      21617     -12751
+30 MIN N E L                71.000     70.000      0.000     82.000      94921      24151     103180      11347
+FUEL TO GR WT              409.000     70.000      0.000     87.000     513755     106078     594373      34472
+COPILOT                    170.000     75.000      0.000    100.000      38092      51209      21617     -12751
+4TH PERSON                 170.000    111.000      0.000    100.000      38092     147815     118222      32666
+3RD PERSON                 170.000    111.000      0.000    100.000      38092     147815     118222      32666
+6TH PERSON                 170.000    150.000      0.000    100.000      38092     749720     720128      81867
+5TH PERSON                 170.000    150.000      0.000    100.000      38092     749720     720128      81867
+BALLAST                     78.000    108.405      0.000     90.000        519      42856      42338      -4687

@@ -7,7 +7,8 @@ from typing import Any, Dict
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 INPUT_PATH = PROJECT_ROOT / "inputs" / "ch6_input.json"
-OUTPUT_PATH = PROJECT_ROOT / "outputs" / "ch6_output.json"
+OUTPUT_PATH = PROJECT_ROOT / "outputs" / "cases" / "ch6_design_speed_output.json"
+REPORT_PATH = PROJECT_ROOT / "outputs" / "reports" / "ch6_design_speeds_report.txt"
 
 
 @dataclass
@@ -213,15 +214,6 @@ def analyze_chapter6(inp: Chapter6Input) -> Dict[str, Any]:
             "N2": N2,
             "MC": mach["MC"],
             "MD": mach["MD"],
-            "INPUT": {
-                "CAT": CAT,
-                "W": W,
-                "S": S,
-                "VH": VH,
-                "VSTALL": VSTALL,
-                "V5FSTALL": V5FSTALL,
-                "HMACH": HMACH,
-            },
             "MINIMUMS": {
                 "WOS": WOS,
                 "K1": K1,
@@ -247,9 +239,69 @@ def analyze_chapter6_from_json(input_json: Dict[str, Any]) -> Dict[str, Any]:
     return analyze_chapter6(Chapter6Input(**raw))
 
 
+def format_report_number(value: float, decimals: int = 6) -> str:
+    if decimals == 0:
+        return str(int(round(float(value))))
+
+    text = f"{float(value):.{decimals}f}".rstrip("0").rstrip(".")
+    if text == "-0":
+        return "0"
+    if text.startswith("0."):
+        return text[1:]
+    if text.startswith("-0."):
+        return "-" + text[2:]
+    return text
+
+
+def build_design_speeds_report(result: Dict[str, Any], shoulder_altitude: float) -> str:
+    output = result["output"]
+    minimums = output["MINIMUMS"]
+
+    lines = [
+        "FAR 23 MINIMUM SPEEDS AND LOAD FACTORS",
+        (
+            f"{'VCMIN':<11}{'VDMIN':<12}{'VAMIN':<12}{'VFMIN':<12}"
+            f"{'POS N':<12}{'NEG N'}"
+        ),
+        (
+            f"{format_report_number(minimums['VCMIN']):<11}"
+            f"{format_report_number(minimums['VDMIN_BY_FACTOR']):<12}"
+            f"{format_report_number(minimums['VAMIN']):<12}"
+            f"{format_report_number(minimums['VFMIN']):<12}"
+            f"{format_report_number(minimums['NMAN']):<12}"
+            f"{format_report_number(minimums['NEGMAN'])}"
+        ),
+        "",
+        "VERIFIED CHOSEN SPEEDS OR ADJUSTED SPEEDS & LOAD FACTORS",
+        (
+            f"{'VC':<11}{'VD':<12}{'VA':<12}{'VF':<12}"
+            f"{'+N':<12}{'-N'}"
+        ),
+        (
+            f"{format_report_number(output['VC']):<11}"
+            f"{format_report_number(output['VD']):<12}"
+            f"{format_report_number(output['VA']):<12}"
+            f"{format_report_number(output['VF']):<12}"
+            f"{format_report_number(output['N1']):<12}"
+            f"{format_report_number(output['N2'])}"
+        ),
+        "",
+        "MACH LIMITATION SPEEDS",
+        f"{'SHOULDER':<15}{'MC':<14}{'MD'}",
+        (
+            f"{format_report_number(shoulder_altitude, 0):<15}"
+            f"{format_report_number(output['MC']):<14}"
+            f"{format_report_number(output['MD'])}"
+        ),
+    ]
+
+    return "\n".join(lines) + "\n"
+
+
 def run_chapter6(
     input_path: str | Path = INPUT_PATH,
     output_path: str | Path = OUTPUT_PATH,
+    report_path: str | Path = REPORT_PATH,
 ) -> Dict[str, Any]:
     with open(input_path, "r", encoding="utf-8-sig") as f:
         input_data = json.load(f)
@@ -260,6 +312,11 @@ def run_chapter6(
     output_path.parent.mkdir(parents=True, exist_ok=True)
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(result, f, indent=2, ensure_ascii=False)
+
+    report_path = Path(report_path)
+    report_path.parent.mkdir(parents=True, exist_ok=True)
+    with open(report_path, "w", encoding="utf-8") as f:
+        f.write(build_design_speeds_report(result, input_data["input"]["HMACH"]))
 
     return result
 
