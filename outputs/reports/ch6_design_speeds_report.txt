@@ -1,0 +1,11 @@
+FAR 23 MINIMUM SPEEDS AND LOAD FACTORS
+VCMIN      VDMIN       VAMIN       VFMIN       POS N       NEG N
+141.808713 198.532198  121.250122  105.48      3.8         -1.52
+
+VERIFIED CHOSEN SPEEDS OR ADJUSTED SPEEDS & LOAD FACTORS
+VC         VD          VA          VF          +N          -N
+170        212.5       121.250122  105.48      3.8         -1.52
+
+MACH LIMITATION SPEEDS
+SHOULDER       MC            MD
+12000          .322691       .403364

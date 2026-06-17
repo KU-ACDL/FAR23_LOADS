@@ -6,9 +6,9 @@ from typing import Any, Dict, List, Union
 
 
 BASE_DIR = Path(__file__).resolve().parents[1]
-INPUT_PATH = BASE_DIR / "inputs" / "ch4_input.json"
-OUTPUT_PATH = BASE_DIR / "outputs" / "ch4_output.json"
-COMPONENT_OUTPUT_PATH = BASE_DIR / "outputs" / "ch4_components_output.json"
+INPUT_PATH = BASE_DIR / "inputs" / "weight_db_for_ch4.json"
+OUTPUT_PATH = BASE_DIR / "outputs" / "cases" / "ch4_weight_inertia_output.json"
+REPORT_PATH = BASE_DIR / "outputs" / "reports" / "ch4_weight_inertia_report.txt"
 
 
 @dataclass
@@ -270,16 +270,124 @@ def load_cases(path: Union[str, Path]) -> Dict[str, List[Component]]:
     with open(path, "r", encoding="utf-8-sig") as f:
         data = json.load(f)
 
+    component_fields = Component.__dataclass_fields__
     return {
-        case_name: [Component(**component) for component in components]
+        case_name: [
+            Component(**{
+                key: value
+                for key, value in component.items()
+                if key in component_fields
+            })
+            for component in components
+        ]
         for case_name, components in data["cases"].items()
     }
+
+
+def write_text(text: str, path: Union[str, Path]) -> None:
+    path = Path(path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with open(path, "w", encoding="utf-8") as f:
+        f.write(text)
+
+
+def lb_in2_to_slug_ft2(value: float) -> float:
+    return value / (32.174 * 144.0)
+
+
+def format_case_title(case_name: str, weight_case_name: str) -> str:
+    if weight_case_name == "C2_GROSS_WEIGHT":
+        return f"{case_name.replace('_', ' ')} WEIGHT CG"
+    return f"{weight_case_name.replace('_', ' ')} CG"
+
+
+def build_ch4_report(output: Dict[str, Any], component_output: Dict[str, Any]) -> str:
+    lines = [
+        "CENTER OF GRAVITY, WEIGHT, & INERTIA",
+        "",
+    ]
+
+    for case_name, case_results in output["CASES"].items():
+        weight_case_name = (
+            "C2_GROSS_WEIGHT"
+            if "C2_GROSS_WEIGHT" in case_results
+            else next(reversed(case_results))
+        )
+        result = case_results[weight_case_name]
+        components = component_output["CASES"][case_name][weight_case_name]["COMPONENTS"]
+
+        lines.extend(
+            [
+                format_case_title(case_name, weight_case_name),
+                "",
+                "",
+                "CENTER OF GRAVITY AND WEIGHT",
+                "XBAR (FUS STA)  ZBAR (WATERLINE)  WEIGHT (POUNDS)",
+                f"{result['XBAR']:>10.5f}{result['ZBAR']:>18.5f}{result['S1']:>17.0f}",
+                "",
+                "",
+                "INERTIAS WITH RESPECT TO AIRPLANE COORDINATES",
+                "IXX              IYY              IZZ              IXZ        UNITS",
+                (
+                    f"{lb_in2_to_slug_ft2(result['IX']):>10.3f}"
+                    f"{lb_in2_to_slug_ft2(result['IY']):>17.3f}"
+                    f"{lb_in2_to_slug_ft2(result['IZ']):>17.3f}"
+                    f"{lb_in2_to_slug_ft2(result['IXZ']):>17.4f}"
+                    "    SLUG FEET SQUARED"
+                ),
+                (
+                    f"{result['IX']:>10.0f}"
+                    f"{result['IY']:>17.0f}"
+                    f"{result['IZ']:>17.0f}"
+                    f"{result['IXZ']:>17.0f}"
+                    "    LBS INCHES SQUARED"
+                ),
+                "",
+                "INERTIAS WITH RESPECT TO PRINCIPAL AXES",
+                "IX(P)            IY(P)            IZ(P)            UNITS",
+                (
+                    f"{lb_in2_to_slug_ft2(result['PXI']):>10.3f}"
+                    f"{lb_in2_to_slug_ft2(result['PYI']):>17.3f}"
+                    f"{lb_in2_to_slug_ft2(result['PZI']):>17.3f}"
+                    "    SLUG FEET SQUARED"
+                ),
+                (
+                    f"{result['PXI']:>10.0f}"
+                    f"{result['PYI']:>17.0f}"
+                    f"{result['PZI']:>17.0f}"
+                    "    LBS INCHES SQUARED"
+                ),
+                "",
+                f"THETA = {result['THETA_DEG']:>10.6f}  (DEGREES, MEASURED UP FROM WL & AFT FROM CG)",
+                "",
+                "",
+                "COMPONENT DATA",
+                "COMPONENT                    WEIGHT       XBAR       YBAR       ZBAR        IXX        IYY        IZZ        IXZ",
+            ]
+        )
+
+        for component in components:
+            lines.append(
+                f"{component['NS'][:24]:<24}"
+                f"{component['W']:>10.3f}"
+                f"{component['X']:>11.3f}"
+                f"{component['Y']:>11.3f}"
+                f"{component['Z']:>11.3f}"
+                f"{component['IX_TOTAL']:>11.0f}"
+                f"{component['IY_TOTAL']:>11.0f}"
+                f"{component['IZ_TOTAL']:>11.0f}"
+                f"{component['IXZ_TOTAL']:>11.0f}"
+            )
+
+        lines.append("")
+
+    return "\n".join(lines).rstrip() + "\n"
 
 
 def run_chapter4(
     input_path: Union[str, Path] = INPUT_PATH,
     output_path: Union[str, Path] = OUTPUT_PATH,
-    component_output_path: Union[str, Path] = COMPONENT_OUTPUT_PATH
+    report_path: Union[str, Path] = REPORT_PATH
 ) -> Dict[str, Any]:
     output, component_output = compute_all_cases(load_cases(input_path))
 
@@ -287,9 +395,7 @@ def run_chapter4(
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(output, f, indent=2, ensure_ascii=False)
 
-    Path(component_output_path).parent.mkdir(parents=True, exist_ok=True)
-    with open(component_output_path, "w", encoding="utf-8") as f:
-        json.dump(component_output, f, indent=2, ensure_ascii=False)
+    write_text(build_ch4_report(output, component_output), report_path)
 
     return output
 
