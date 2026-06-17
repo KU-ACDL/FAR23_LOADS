@@ -3,7 +3,7 @@
   "program": "WTENV.BAS",
   "input": {
     "path": "inputs/weight_db.json",
-    "case": "aft_gross",
+    "database": "weight_db",
     "program_data": {
       "M": 100,
       "ID": "6 PLACE AIRPLANE",
